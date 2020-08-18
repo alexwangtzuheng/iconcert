@@ -6,7 +6,7 @@
     height: 80px;
     background-color: white;
     box-shadow: 2px 2px 5px 2px lightgray;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
   .nabar-homepage > a {
     /* border: 1px solid red; */
@@ -42,7 +42,7 @@
     color: black;
     width: 80px;
     height: 80px;
-    margin-right: 3px;
+    margin-right: 10px;
     padding: 35px 0;
     text-align: center;
     transition-duration: .3s;
@@ -54,7 +54,7 @@
     display: inline-block;
     /* border: 1px solid red; */
     color: gray;
-    margin-left: 10px;
+    margin-left: 20px;
     transition-duration: .3s;
   }
   .navbar-listsLiLogin:hover, .navbar-listsLiRegist:hover{

@@ -15,7 +15,7 @@
           <li class="navbar-listsLi">
             <router-link :to="'/questions'">常見問題</router-link>
           </li>
-          <li class="navbar-listsLi">
+          <li class="navbar-listsLi" style="margin-right:40px">
             <router-link :to="'/order'">訂單查詢</router-link>
           </li>
           <li class="navbar-listsLiLogin">
