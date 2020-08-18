@@ -46,10 +46,13 @@
 
 /* scroll down btn */
 .scrollDownBtn{
-    transform: translateY(70vh);
+    transform: translateY(67vh);
 }
 .scrollDownBtn a {
     padding-top: 60px;
+}
+.scrollDownBtn a:hover{
+    cursor: pointer;
 }
 .scrollDownBtn a span {
     position: absolute;
@@ -129,7 +132,7 @@
     width: 1200px;
     height: 800px;
     margin: 0 auto;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 .secondScreen > h2{
     font-size: 24px;
@@ -162,6 +165,15 @@
     transition-duration: .3s;
 }
 .secondScreen-newsLeftContent:hover{
+    color: rgb(13, 81, 145);
+    cursor: pointer;
+}
+.secondScreen-newsRightContent{
+    border-bottom: 1px solid gray;
+    padding: 8px 0 3px 0;
+    transition-duration: .3s;
+}
+.secondScreen-newsRightContent:hover{
     color: rgb(13, 81, 145);
     cursor: pointer;
 }

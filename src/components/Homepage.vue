@@ -6,10 +6,10 @@
         <button>搜尋</button>
       </div> 
       <section class="scrollDownBtn">
-        <a href="#section04" @click="scrollDown"><span></span></a>
+        <a @click="scrollDown"><span></span></a>
       </section> 
     </div>
-    <div class="secondScreen">
+    <div class="secondScreen" id="secondScreen">
       <h2>最新消息</h2>
       <hr>
       <div class="secondScreen-news">
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
   name: 'HelloWorld',
   data () {
@@ -40,7 +41,9 @@ export default {
   },
   methods: {
       scrollDown () {
-          console.log('123');
+          $('html,body').animate({
+            scrollTop: $('#secondScreen').offset().top
+          },800);
       }
   }
 }
