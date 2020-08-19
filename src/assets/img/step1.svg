@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1699" height="160" viewBox="0 0 1699 160">
+  <g id="Group_145" data-name="Group 145" transform="translate(-4775 -2231)">
+    <text id="選定區域" transform="translate(4775 2375)" font-size="39" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">選定區域</tspan></text>
+    <ellipse id="Ellipse_9" data-name="Ellipse 9" cx="40.5" cy="41" rx="40.5" ry="41" transform="translate(4813 2231)"/>
+    <circle id="Ellipse_10" data-name="Ellipse 10" cx="28" cy="28" r="28" transform="translate(4826 2244)" fill="#fff"/>
+    <rect id="Rectangle_203" data-name="Rectangle 203" width="447" height="20" transform="translate(4884 2262)"/>
+    <text id="結帳" transform="translate(5838 2378)" font-size="41" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">結帳</tspan></text>
+    <text id="完成訂購" transform="translate(6318 2375)" font-size="39" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">完成訂購</tspan></text>
+    <ellipse id="Ellipse_14" data-name="Ellipse 14" cx="40" cy="41" rx="40" ry="41" transform="translate(5838 2231)"/>
+    <circle id="Ellipse_15" data-name="Ellipse 15" cx="28" cy="28" r="28" transform="translate(5850 2244)" fill="#fff"/>
+    <rect id="Rectangle_205" data-name="Rectangle 205" width="447" height="20" transform="translate(5906 2262)"/>
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="41" cy="41" r="41" transform="translate(6348 2231)"/>
+    <circle id="Ellipse_17" data-name="Ellipse 17" cx="28" cy="28" r="28" transform="translate(6361 2244)" fill="#fff"/>
+    <text id="選擇張數" transform="translate(5286 2375)" font-size="39" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">選擇張數</tspan></text>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="41" cy="41" r="41" transform="translate(5326 2231)"/>
+    <circle id="Ellipse_12" data-name="Ellipse 12" cx="28" cy="28" r="28" transform="translate(5339 2244)" fill="#fff"/>
+    <rect id="Rectangle_204" data-name="Rectangle 204" width="446" height="20" transform="translate(5396 2262)"/>
+    <circle id="Ellipse_13" data-name="Ellipse 13" cx="20.5" cy="20.5" r="20.5" transform="translate(4834 2251)" fill="#fe0000"/>
+  </g>
+</svg>

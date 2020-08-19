@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1699" height="171.45" viewBox="0 0 1699 171.45">
+  <g id="Group_146" data-name="Group 146" transform="translate(-4779 -2011.55)">
+    <text id="選定區域" transform="translate(4779 2171)" font-size="39" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">選定區域</tspan></text>
+    <text id="選擇張數" transform="translate(5290 2171)" font-size="39" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">選擇張數</tspan></text>
+    <text id="結帳" transform="translate(5842 2171)" font-size="39" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">結帳</tspan></text>
+    <text id="完成訂購" transform="translate(6322 2171)" font-size="39" font-family="NotoSansTC-Regular, Noto Sans TC"><tspan x="0" y="0">完成訂購</tspan></text>
+    <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="40.5" cy="41" rx="40.5" ry="41" transform="translate(4821 2026)"/>
+    <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="28" cy="28.5" rx="28" ry="28.5" transform="translate(4833 2039)" fill="#fff"/>
+    <rect id="Rectangle_55" data-name="Rectangle 55" width="447" height="20" transform="translate(4889 2058)"/>
+    <ellipse id="Ellipse_4-2" data-name="Ellipse 4" cx="40.5" cy="41" rx="40.5" ry="41" transform="translate(5331 2026)"/>
+    <ellipse id="Ellipse_5-2" data-name="Ellipse 5" cx="28" cy="28.5" rx="28" ry="28.5" transform="translate(5344 2039)" fill="#fff"/>
+    <rect id="Rectangle_55-2" data-name="Rectangle 55" width="447" height="20" transform="translate(5400 2058)"/>
+    <circle id="Ellipse_4-3" data-name="Ellipse 4" cx="41" cy="41" r="41" transform="translate(5842 2026)"/>
+    <ellipse id="Ellipse_5-3" data-name="Ellipse 5" cx="28" cy="28.5" rx="28" ry="28.5" transform="translate(5855 2039)" fill="#fff"/>
+    <rect id="Rectangle_55-3" data-name="Rectangle 55" width="448" height="20" transform="translate(5910 2058)"/>
+    <ellipse id="Ellipse_4-4" data-name="Ellipse 4" cx="40.5" cy="41" rx="40.5" ry="41" transform="translate(6352 2026)"/>
+    <ellipse id="Ellipse_5-4" data-name="Ellipse 5" cx="27.5" cy="28.5" rx="27.5" ry="28.5" transform="translate(6365 2039)" fill="#fff"/>
+    <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="20" cy="20.5" rx="20" ry="20.5" transform="translate(5352 2047)" fill="#fe0000"/>
+    <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M33.389,76.444,1.44,44.5a4.915,4.915,0,0,1,0-6.951l6.951-6.951a4.915,4.915,0,0,1,6.951,0L36.864,52.115l46.1-46.1a4.915,4.915,0,0,1,6.951,0l6.951,6.951a4.915,4.915,0,0,1,0,6.951L40.34,76.444A4.915,4.915,0,0,1,33.389,76.444Z" transform="translate(4820.017 2006.973)" fill="#03a518"/>
+  </g>
+</svg>

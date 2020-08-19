@@ -1,0 +1,95 @@
+footer{
+    /* border: 1px solid red; */
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+.foot{
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 210px;
+    position: absolute;
+    top: 100px;
+    bottom: 50px;
+    box-shadow: 0px 5px 15px 0px gray;
+    overflow: hidden;
+}
+div.foot > a > img{
+    transition: .5s ease-out;
+}
+  
+.about{
+    /* border: 1px solid blue; */
+    position: absolute;
+    left: calc(50% - 390px);
+    top: 30%;
+}
+div.about > a{
+    color: black;
+    font-family: Microsoft JhengHei;
+    font-size: 14px;
+    transition-duration: .3s;
+}
+div.about > a:hover{
+    color: gray;
+}
+.app_icons{
+    /* border: 1px solid red; */
+    position: absolute;
+    left: calc(50% - 398px);
+    top: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding: 8px;
+}
+img.fb{
+    /* border: 1px solid red; */
+    width: 31px;
+    margin-right: 15px;
+}
+img.twitter{
+    width: 31px;
+    margin-right: 12px;
+}
+img.ig{
+    width: 31px;
+}
+.iconcert_company{
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+}
+.iconcert_company > p{
+    margin: 5px;
+    font-family: Microsoft JhengHei;
+    font-size: 14px;
+}
+div.logobox{
+    /* border: 1px solid blue; */
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: calc(50% - 400px);
+    font-family: Microsoft JhengHei;
+    font-size: 10px;
+}
+div.logobox > p{
+    position: absolute;
+    top: 150px;
+    left: 25px;
+}
+img.lll{
+    width: 115px;
+    height: 120px;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    transform: translateY(-50%);
+}
