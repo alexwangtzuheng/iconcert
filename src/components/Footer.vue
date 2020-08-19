@@ -1,3 +1,34 @@
+<template>
+    <footer>
+      <div class="foot">
+        <div class="about">
+          <a href="#">關於我們</a> <a href="#">隱私權政策</a>
+        </div>
+        <div class="app_icons">
+          <a href="#"><img src="../assets/img/fb.png" class="fb"></a>
+          <a href="#"><img src="../assets/img/twitter.png" class="twitter"></a>
+          <a href="#"><img src="../assets/img/ig.png" class="ig"></a>
+        </div>
+        <div class="iconcert_company">
+          <p>iconcert股份有限公司</p>
+          <p>聯絡電話：03-2345-6789</p>
+          <p>客服專線：0800-092-001</p>
+          <p>聯絡地址：桃園市中大路300號</p>
+        </div>
+
+        <div class="logobox">
+          <img src="../assets/img/iconcert.png" class="lll">
+          <br>
+          <p>Copyright &copy; 2020 iconcert.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All right reserved.</p>
+        </div>
+      </div>
+    </footer>
+</template>
+
+<script>
+</script>
+
+<style>
 footer{
     /* border: 1px solid red; */
     position: relative;
@@ -28,7 +59,6 @@ div.foot > a > img{
 }
 div.about > a{
     color: black;
-    font-family: Microsoft JhengHei;
     font-size: 14px;
     transition-duration: .3s;
 }
@@ -93,3 +123,4 @@ img.lll{
     top: 40%;
     transform: translateY(-50%);
 }
+</style>

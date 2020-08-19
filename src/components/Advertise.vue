@@ -1,3 +1,20 @@
+<template>
+    <main class="application">
+      <div class="app">
+        <img src="../assets/img/iconcert_app3.png" class="iconcert_app">
+        <p class="tittle">iconcert 手機板上線囉!</p>
+        <p>豐富的資訊、貼心的服務，</p>
+        <p>最完整的演唱會體驗盡在 iconcert!</p>
+        <a href="https://www.apple.com/tw/ios/app-store/" target="_blank" class="ios"><img src="../assets/img/ios_download.png" class="ios_download"></a>
+        <a href="https://play.google.com/store?hl=zh_TW" target="_blank" class="android"><img src="../assets/img/android_download.png" class="android_download"></a>
+      </div>
+    </main>
+</template>
+
+<script>
+</script>
+
+<style>
 .application{
     margin-top: 100px;
 }
@@ -6,7 +23,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 550px;
-    background-image: url(../img/app_background.jpg);
+    background-image: url(../assets/img/app_background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -86,3 +103,4 @@ div.app > p.tittle{
     width: 150px;
     transform: translateY(2px);
   }
+</style>
