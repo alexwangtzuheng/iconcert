@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar"> 
       <!-- login/regist lightbox -->
-      <loginLightbox v-bind:messageFromParent = message ></loginLightbox>  
+      <loginLightbox @childClose='childClose' :messageFromParent='message'></loginLightbox>  
       <div class="nabar-homepage">
         <router-link :to="'/'"><img src="../assets/img/iconsert-3.png"></router-link>
       </div>
@@ -37,23 +37,26 @@ export default {
     // name: "nav",
     data () {
       return{
-        // message: true
+        message: true
       }      
     },
     components: {
         loginLightbox
     },
+    // props:{
+    //     message: {
+    //         type: Boolean,
+    //         default: true,
+    //     },
+    // },
     methods: {
         showLoginLightbox () {
             this.message = false;
             console.log(this);
-        }
-    },
-    props:{
-        message: {
-            type: Boolean,
-            default: true,
         },
+        childClose (close) {
+            this.message = close;
+        }
     }
 }
 </script>

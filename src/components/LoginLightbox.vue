@@ -1,5 +1,5 @@
 <template>
-    <div class="loginLightbox-bg" :class="{ lightboxNoShow: islightboxNoShow }">
+    <div class="loginLightbox-bg" :class="{ lightboxNoShow: this.messageFromParent }">
         <div class="loginer">
             <p class="tittle">會員登入</p>
             <p class="choose">請選擇以下社群帳號登入！</p>
@@ -10,24 +10,25 @@
             <div class="facebook">
                 <a href="#"><img src="../assets/img/facebook.png"></a>
             </div>
-            <img class="cross1" src="../assets/img/cross.png"><br>
+            <img @click="childClose" class="cross1" src="../assets/img/cross.png"><br>
             <p class="not_member">還不是會員？ <a href="#">註冊</a></p>
-            <div style="border: 1px solid red;">
-                {{ messageFromParent }}
-            </div>
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    props: [ 'messageFromParent' ],
     data () {
         return {
-            islightboxNoShow: 'messageFromParent',
-            // islightboxNoShow: true,
         }
-    },
-    props: [ 'messageFromParent' ],
+    }, 
+    methods: {
+        childClose () {
+            this.messageFromParent = true;
+            this.$emit('childClose', true);
+        }
+    }
 }
 </script>
 

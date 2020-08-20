@@ -139,6 +139,9 @@ export default {
 </script>
 
 <style scoped>
+.homepage{
+    padding-bottom: 150px;
+}
 /* banner */
 .banner{
     /* border: 1px solid red; */

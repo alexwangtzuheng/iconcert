@@ -29,7 +29,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .order-bg{
     background-color: rgb(245, 245, 245);
@@ -71,10 +70,5 @@ table th{
   color: red;
   font-size: 18px;
   text-align: center;
-}
-
-/* ============= */
-main.application{
-  margin-top: 250px;
 }
 </style>
