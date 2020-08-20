@@ -15,9 +15,6 @@
 </script>
 
 <style>
-.application{
-    margin-top: 100px;
-}
 .app{
     display: inline-block;
     box-sizing: border-box;

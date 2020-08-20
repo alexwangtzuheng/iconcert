@@ -1,5 +1,5 @@
 <template>
-initial    <div class="programs-bg">
+<div class="programs-bg">
         <div class="programs">
             <h2>&nbsp;&nbsp;節目資訊</h2>
             <hr>
