@@ -210,7 +210,6 @@ a.book_rightnow:hover{
 .programBoxes2{
     animation: fadeEffect .5s;
 }
-
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}

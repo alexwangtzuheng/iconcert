@@ -1,5 +1,7 @@
 <template>
-    <nav class="navbar">
+    <nav class="navbar"> 
+      <!-- login/regist lightbox -->
+      <loginLightbox v-bind:messageFromParent = message ></loginLightbox>  
       <div class="nabar-homepage">
         <router-link :to="'/'"><img src="../assets/img/iconsert-3.png"></router-link>
       </div>
@@ -17,7 +19,7 @@
           <li class="navbar-listsLi" style="margin-right:20px">
             <router-link :to="'/order'">訂單查詢</router-link>
           </li>
-          <li class="navbar-listsLiLogin">
+          <li @click="showLoginLightbox" class="navbar-listsLiLogin">
             <span>登入</span>
           </li>
           <li class="navbar-listsLiRegist">
@@ -25,33 +27,53 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> 
 </template>
 
 <script>
+import loginLightbox from './LoginLightbox.vue'
 
+export default {
+    // name: "nav",
+    data () {
+      return{
+        // message: true
+      }      
+    },
+    components: {
+        loginLightbox
+    },
+    methods: {
+        showLoginLightbox () {
+            this.message = false;
+            console.log(this);
+        }
+    },
+    props:{
+        message: {
+            type: Boolean,
+            default: true,
+        },
+    }
+}
 </script>
 
 <style>
 .navbar{
-    /* border: 1px solid red; */
     box-sizing: border-box;
     position: relative;
     width: 100%;
     height: 70px;
     background-color: white;
     box-shadow: 2px 2px 5px 2px lightgray;
-    /* margin-bottom: 30px; */
 }
 .nabar-homepage > a {
-    /* border: 1px solid red; */
     display: inline-block;
     width: 70px;
     height: 70px;
     margin-left: 50px;
 }
 .nabar-homepage > a > img{
-    /* width: 60px; */
     height: 58px;
     margin: 6px;
 }
