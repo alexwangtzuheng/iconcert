@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar"> 
-      <!-- login/regist lightbox -->
-      <loginLightbox @childClose='childClose' :messageFromParent='message'></loginLightbox>  
+      <!-- login lightbox -->
+      <loginLightbox @loginLightboxClose='loginLightboxClose' :messageFromParent='message'></loginLightbox>  
+      <!-- regist lightbox -->
+      <registLightbox @registLightboxClose='registLightboxClose' :messageFromParent2='message2'></registLightbox> 
       <div class="nabar-homepage">
         <router-link :to="'/'"><img src="../assets/img/iconsert-3.png"></router-link>
       </div>
@@ -22,7 +24,7 @@
           <li @click="showLoginLightbox" class="navbar-listsLiLogin">
             <span>登入</span>
           </li>
-          <li class="navbar-listsLiRegist">
+          <li @click="showRegistLightbox" class="navbar-listsLiRegist">
             <span>註冊</span>
           </li>
         </ul>
@@ -32,30 +34,32 @@
 
 <script>
 import loginLightbox from './LoginLightbox.vue'
+import registLightbox from './RegistsLightbox.vue'
 
 export default {
     // name: "nav",
     data () {
       return{
-        message: true
+        message: true,
+        message2: true
       }      
     },
     components: {
-        loginLightbox
+        loginLightbox,
+        registLightbox
     },
-    // props:{
-    //     message: {
-    //         type: Boolean,
-    //         default: true,
-    //     },
-    // },
     methods: {
         showLoginLightbox () {
             this.message = false;
-            console.log(this);
         },
-        childClose (close) {
-            this.message = close;
+        loginLightboxClose () {
+            this.message = true;
+        },
+        showRegistLightbox () {
+            this.message2 = false;
+        },
+        registLightboxClose () {
+            this.message2 = true;
         }
     }
 }

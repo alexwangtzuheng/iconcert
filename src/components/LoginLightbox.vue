@@ -10,7 +10,7 @@
             <div class="facebook">
                 <a href="#"><img src="../assets/img/facebook.png"></a>
             </div>
-            <img @click="childClose" class="cross1" src="../assets/img/cross.png"><br>
+            <img @click="loginLightboxClose" class="cross1" src="../assets/img/cross.png"><br>
             <p class="not_member">還不是會員？ <a href="#">註冊</a></p>
         </div>
     </div>
@@ -24,9 +24,9 @@ export default {
         }
     }, 
     methods: {
-        childClose () {
+        loginLightboxClose () {
             this.messageFromParent = true;
-            this.$emit('childClose', true);
+            this.$emit('loginLightboxClose');
         }
     }
 }
