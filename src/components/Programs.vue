@@ -1,5 +1,5 @@
 <template>
-<div class="programs-bg">
+    <div class="programs-bg">
         <div class="programs">
             <h2>&nbsp;&nbsp;節目資訊</h2>
             <hr>
@@ -60,7 +60,7 @@ export default {
 <style scoped>
 .programs-bg{
     background-color: rgb(245, 245, 245);
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 .programs{
     /* border: 1px solid green; */
