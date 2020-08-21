@@ -320,7 +320,6 @@ img.tri{
     line-height: 25px;
     color: black;
     animation: fadeEffect .5s;
-    /* transition-duration: .5s; */
 }
 @keyframes fadeEffect {
   from {opacity: .5;}
