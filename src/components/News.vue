@@ -7,29 +7,29 @@
         <!-- left aside -->
         <div class="smallmenu">
           <div class="smallmenu_tittle">[置頂]</div>
-          <div class="smallmenu_content" id="smallmenu_content1"><img src="../assets/img/ticket.png" class="ticket">退票作業延長公告</div>
-          <div class="smallmenu_content" id="smallmenu_content2"><img src="../assets/img/ticket.png" class="ticket">iconcert售票app上架<br> &nbsp;&nbsp;&nbsp;&nbsp; 囉！</div>
-          <div class="smallmenu_content" id="smallmenu_content3"><img src="../assets/img/ticket.png" class="ticket">iconcert會員加入辦法</div>
+          <div class="smallmenu_content" @click="scrollFixtop('0')"><img src="../assets/img/ticket.png" class="ticket">退票作業延長公告</div>
+          <div class="smallmenu_content" @click="scrollFixtop('1')"><img src="../assets/img/ticket.png" class="ticket">iconcert售票app上架<br> &nbsp;&nbsp;&nbsp;&nbsp; 囉！</div>
+          <div class="smallmenu_content" @click="scrollFixtop('2')"><img src="../assets/img/ticket.png" class="ticket">iconcert會員加入辦法</div>
           <div class="smallmenu_tittle">[最新公告]</div>
-          <div class="smallmenu_content" id="smallmenu_content4"><img src="../assets/img/ticket.png" class="ticket">節目延期公告-[郭富城<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;舞林密碼-台北小巨蛋]</div>
-          <div class="smallmenu_content" id="smallmenu_content5"><img src="../assets/img/ticket.png" class="ticket">節目延期公告 - [蔡健 <br>&nbsp;&nbsp;&nbsp;&nbsp; 雅給世界最優長的吻-<br>&nbsp;&nbsp;&nbsp;&nbsp; 台北站]</div>
+          <div class="smallmenu_content" @click="scrollNewthing('0')"><img src="../assets/img/ticket.png" class="ticket">節目延期公告-[郭富城<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;舞林密碼-台北小巨蛋]</div>
+          <div class="smallmenu_content" @click="scrollNewthing('1')"><img src="../assets/img/ticket.png" class="ticket">節目延期公告 - [蔡健 <br>&nbsp;&nbsp;&nbsp;&nbsp; 雅給世界最優長的吻-<br>&nbsp;&nbsp;&nbsp;&nbsp; 台北站]</div>
           <div class="smallmenu_tittle">[一般公告]</div>
-          <div class="smallmenu_content" id="smallmenu_content6"><img src="../assets/img/ticket.png" class="ticket">預防詐騙提醒</div>
-          <div class="smallmenu_content" id="smallmenu_content7"><img src="../assets/img/ticket.png" class="ticket">節目延期公告 - [陳小 <br>&nbsp;&nbsp;&nbsp;&nbsp; 春 STOP ANGRY 巡迴<br>&nbsp;&nbsp;&nbsp;&nbsp; 演唱會-台北站]</div>
+          <div class="smallmenu_content" @click="scrollNormal('0')"><img src="../assets/img/ticket.png" class="ticket">預防詐騙提醒</div>
+          <div class="smallmenu_content" @click="scrollNormal('1')"><img src="../assets/img/ticket.png" class="ticket">節目延期公告 - [陳小 <br>&nbsp;&nbsp;&nbsp;&nbsp; 春 STOP ANGRY 巡迴<br>&nbsp;&nbsp;&nbsp;&nbsp; 演唱會-台北站]</div>
         </div>
 
         <!-- right aside -->
         <div class="newscontent">
           <!-- fixtop -->
           <p class="fixtop">[置頂]</p>
-          <div class="textContent" v-for="item in fixtops">
+          <div class="textContent" v-for="(item, index) in fixtops" :class="createClassFixtop(index)">
             <img src="../assets/img/ticket.png" class="ticket">
             <label>{{ item.title }}</label>
             <p v-html="item.content">{{ item.content }}</p>
           </div>
           <!-- newthing -->
           <p class="newthing">[最新公告]</p>
-          <div class="textContent" v-for="item in newthings">
+          <div class="textContent" v-for="(item, index) in newthings" :class="createClassNewthing(index)">
             <img src="../assets/img/ticket.png" class="ticket">
             <label for="">{{item.title}}</label>
             <img :src="item.img" class="poster">
@@ -37,7 +37,7 @@
           </div>
           <!-- normal -->
           <p class="normal">[一般公告]</p>
-          <div class="textContent" v-for="item in normals">
+          <div class="textContent" v-for="(item, index) in normals" :class="createClassNormal(index)">
             <img src="../assets/img/ticket.png" class="ticket">
             <label for="">{{ item.title }}</label>
             <img :src="item.img" class="poster">
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import $ from 'jquery'
 export default {
     data () {
         return {
@@ -92,6 +93,35 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        scrollFixtop (order) {
+            let specificClass = '.newClassFixtop-'+order
+            $('html,body').animate({
+            scrollTop: $(specificClass).offset().top
+            },800);
+        },
+        scrollNewthing (order) {
+            let specificClass = '.newClassNewthing-'+order
+            $('html,body').animate({
+            scrollTop: $(specificClass).offset().top
+            },800);
+        },
+        scrollNormal (order) {
+            let specificClass = '.newClassNormal-'+order
+            $('html,body').animate({
+            scrollTop: $(specificClass).offset().top
+            },800);
+        },
+        createClassFixtop (index) {
+            return `newClassFixtop-${index}`
+        },
+        createClassNewthing (index) {
+            return `newClassNewthing-${index}`
+        },
+        createClassNormal (index) {
+            return `newClassNormal-${index}`
+        },
     }
 }
 </script>
@@ -126,7 +156,7 @@ div.main_text{
     margin-left: 10px;
     margin-right: 10px;
     position: sticky;
-    top: 30px;
+    top: 10px;
     font-size: 16px;
     display: inline-block;
     vertical-align: top;
@@ -164,6 +194,7 @@ div.main_text{
 div.newscontent{
     width: 950px;
     display: inline-block;
+    padding-bottom: 50px;
 }
 .fixtop, .newthing, .normal{
     padding: 5px 10px 5px;
