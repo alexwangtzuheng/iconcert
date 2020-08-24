@@ -1,14 +1,22 @@
 <template>
     <div class="programsAll">
         <div class="programBoxes1">
-            <div class="program_content content" v-for="item in programs" :style="{backgroundImage:'url(' +item.bgPhoto+ ')'}">
+            <!-- <div class="program_content content" v-for="item in programs" :style="{backgroundImage:'url(' +item.bgPhoto+ ')'}">
                 <div class="content_mask">
                     <p>{{ item.date }}</p>
                     <p>{{ item.name }}</p>
                     <div class="line"></div>
                     <a href="#" class="book_rightnow">立即訂購</a>
                 </div>
-            </div>
+            </div> -->
+            <router-link :to="{name:'ProgramsDetail', params:{ id:index }}"  class="program_content content" v-for="(item, index) in programs" :style="{backgroundImage:'url(' +item.bgPhoto+ ')'}">
+                <div class="content_mask">
+                    <p>{{ item.date }}</p>
+                    <p>{{ item.name }}</p>
+                    <div class="line"></div>
+                    <a href="#" class="book_rightnow">立即訂購</a>
+                </div>
+            </router-link>
         </div>
         <div class="clickMeToSpan" :class="{ clickMeToSpanHide: notclickMeToSpanHide }" @click="clickMeToSpan">&#9660;看看其他精彩節目</div>
         <div class="programBoxes2" :class="{ clickMeToSpanHide: isclickMeToSpanHide }">

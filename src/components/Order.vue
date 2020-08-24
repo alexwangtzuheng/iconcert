@@ -48,7 +48,7 @@ export default {
     border-top: 1px dashed gray;
 }
 .cart{
-  width: 1200px;
+    width: 1200px;
     border: 2px solid lightgray;
     border-collapse: collapse;
     margin: 0 auto;
