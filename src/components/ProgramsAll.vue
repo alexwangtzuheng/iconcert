@@ -1,20 +1,12 @@
 <template>
     <div class="programsAll">
         <div class="programBoxes1">
-            <!-- <div class="program_content content" v-for="item in programs" :style="{backgroundImage:'url(' +item.bgPhoto+ ')'}">
-                <div class="content_mask">
-                    <p>{{ item.date }}</p>
-                    <p>{{ item.name }}</p>
-                    <div class="line"></div>
-                    <a href="#" class="book_rightnow">立即訂購</a>
-                </div>
-            </div> -->
             <router-link :to="{name:'ProgramsDetail', params:{ id:index }}"  class="program_content content" v-for="(item, index) in programs" :style="{backgroundImage:'url(' +item.bgPhoto+ ')'}">
                 <div class="content_mask">
                     <p>{{ item.date }}</p>
                     <p>{{ item.name }}</p>
                     <div class="line"></div>
-                    <a href="#" class="book_rightnow">立即訂購</a>
+                    <router-link :to="{name:'ProgramsSelectSeats', params:{ id:index }}" class="book_rightnow">立即訂購</router-link>
                 </div>
             </router-link>
         </div>
@@ -25,7 +17,7 @@
                     <p>{{ item.date }}</p>
                     <p>{{ item.name }}</p>
                     <div class="line"></div>
-                    <a href="#" class="book_rightnow">立即訂購</a>
+                    <router-link :to="{name:'ProgramsSelectSeats', params:{ id:index }}" class="book_rightnow">立即訂購</router-link>
                 </div>
             </div>
         </div>
@@ -156,7 +148,7 @@ export default {
 .program_content:hover{
   clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
 }
-div.line{
+.line{
   border: 1px solid transparent;
   width: 0px;
   transition: .5s;
@@ -166,7 +158,7 @@ div.line{
   display: block;
   width: 335px;
 }
-a.book_rightnow{
+.book_rightnow{
   border: 1px solid rgb(201,16,16);
   font-size: 14px;
   transition: .1s linear;
@@ -180,7 +172,7 @@ a.book_rightnow{
   opacity: .9;
   transform: translateY(5px);
 }
-a.book_rightnow:hover{
+.book_rightnow:hover{
   background-color: rgb(185,15,15);
 }
 .content_mask{

@@ -6,6 +6,7 @@ import News from '@/components/News'
 import Questions from '@/components/Questions'
 import Order from '@/components/Order'
 import ProgramsDetail from '@/components/ProgramsDetail'
+import ProgramsSelectSeats from '@/components/ProgramsSelectSeats'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/programs/detail/:id',
       name: 'ProgramsDetail',
       component: ProgramsDetail
+    },
+    {
+      path: '/programs/selectSeats/:id',
+      name: 'ProgramsSelectSeats',
+      component: ProgramsSelectSeats
     },
     {
       path: '/news',

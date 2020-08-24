@@ -10,7 +10,7 @@
       </div>
       <div class="ai1_content">
         <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
-        <a href="#">立即訂購</a>
+        <router-link :to="'/programs/selectSeats'" class="book_rightnow">立即訂購</router-link>
         <div @click="seeDetail" class="ai1_quastion_list">
           <div class="rectangle"></div>節目資訊<img class="triangle_right preopen" src="../assets/img/triangle_right2.png">
         </div>
@@ -189,7 +189,7 @@ img.ai{
     margin-left: 10px;
     display: inline-block;
 }
-.ai1_content > a{
+.book_rightnow{
     border: 1px solid rgb(201, 16, 16);
     font-size: 16px;
     margin: 20px 10px 20px;
@@ -206,7 +206,7 @@ img.ai{
     text-align: center;
     transform: translateY(-25%);
 }
-.ai1_content > a:hover{
+.book_rightnow:hover{
     background-color: rgb(185, 15, 15);
 }
 .ai1_quastion_list{

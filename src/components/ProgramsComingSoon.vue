@@ -6,7 +6,7 @@
                     <p>{{ item.date }}</p>
                     <p>{{ item.name }}</p>
                     <div class="line"></div>
-                    <a href="#" class="book_rightnow">立即訂購</a>
+                    <router-link :to="'/programs/buy'" class="book_rightnow">立即訂購</router-link>
                 </div>
             </div>
         </div>
