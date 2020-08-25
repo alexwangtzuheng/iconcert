@@ -38,16 +38,16 @@
         <div v-if="item.place == 'right'" class="textContent">
           <div class="maskContent"></div>
           <p>{{item.time}}<br>{{item.name}}<br></p>
-          <a href="#" class="book_rightnow">立即訂購</a>
-          <a href="#" class="check_detail">查看詳情</a>
+          <a class="book_rightnow">立即訂購</a>
+          <a class="check_detail">查看詳情</a>
         </div>
         <!-- left -->
         <div v-if="item.place == 'left'" class="boxContent2" :style="{backgroundImage:'url(' +item.photo+ ')'}"></div>
         <div v-if="item.place == 'left'" class="textContent2">
           <div class="maskContent"></div>
           <p>{{item.time}}<br>{{item.name}}<br></p>
-          <a href="#" class="book_rightnow">立即訂購</a>
-          <a href="#" class="check_detail">查看詳情</a>
+          <a class="book_rightnow">立即訂購</a>
+          <a class="check_detail">查看詳情</a>
         </div>
       </div>
     </div>
@@ -144,7 +144,6 @@ export default {
 }
 /* banner */
 .banner{
-    /* border: 1px solid red; */
     width: 100%;
     height: calc(95vh - 50px);
     background-image: url(../assets/img/banner.jpg);
@@ -507,6 +506,7 @@ export default {
 }
 .book_rightnow:hover{
     background-color: rgb(185, 15, 15);
+    cursor: pointer;
 }
 .check_detail{
     width: 100px;
@@ -520,5 +520,6 @@ export default {
 }
 .check_detail:hover{
     color: rgb(228, 228, 228);
+    cursor: pointer;
 }
 </style>
