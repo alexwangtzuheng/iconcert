@@ -7,6 +7,7 @@ import Questions from '@/components/Questions'
 import Order from '@/components/Order'
 import ProgramsDetail from '@/components/ProgramsDetail'
 import ProgramsSelectSeats from '@/components/ProgramsSelectSeats'
+import ProgramsSelectAmount from '@/components/ProgramsSelectAmount'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
       path: '/programs/selectSeats/:id',
       name: 'ProgramsSelectSeats',
       component: ProgramsSelectSeats
+    },
+    {
+      path: '/programs/selectAmount/:id',
+      name: 'ProgramsSelectAmount',
+      component: ProgramsSelectAmount
     },
     {
       path: '/news',

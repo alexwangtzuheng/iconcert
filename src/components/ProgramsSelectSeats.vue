@@ -10,60 +10,21 @@
         <p class="ai1_imgP">請選擇區域！</p>
         <div class="seats_selection">
           <a href="#" class="seats_tittle"><label class="box1">&nbsp;&nbsp;&nbsp;&nbsp;</label>4200區</a><br><br>
-          <a href="#" class="seats_content"><label class="box2">&nbsp;&nbsp;&nbsp;&nbsp;</label>特A1區4200</a><br><br>
-          <a href="#" class="seats_content"><label class="box3">&nbsp;&nbsp;&nbsp;&nbsp;</label>特A2區4200</a><br><br>
+          <span v-for="item in selectSeats4200"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }}</a><br><br></span>
           <a href="#" class="seats_tittle"><label class="box4">&nbsp;&nbsp;&nbsp;&nbsp;</label>3800區</a><br><br>
-          <a href="#" class="seats_content"><label class="box5">&nbsp;&nbsp;&nbsp;&nbsp;</label>特B區3800 </a><br><br>
+          <span v-for="item in selectSeats3800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
           <a href="#" class="seats_tittle"><label class="box6">&nbsp;&nbsp;&nbsp;&nbsp;</label>3200區</a><br><br>
-          <a href="#" class="seats_content"><label class="box7">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅1B區3200</a><br><br>
-          <a href="#" class="seats_content"><label class="box8">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅1C區3200</a><br><br>
-          <a href="#" class="seats_content"><label class="box9">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅1D區3200</a><br><br>
-          <a href="#" class="seats_content"><label class="box10">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫1B區3200</a><br><br>
-          <a href="#" class="seats_content"><label class="box11">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫1C區3200</a><br><br>
-          <a href="#" class="seats_content"><label class="box12">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫1D區3200</a><br><br>
-          <a href="#" class="seats_content"><label class="box13">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃2C區3200</a><br><br>
+          <span v-for="item in selectSeats3200"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
           <a href="#" class="seats_tittle"><label class="box14">&nbsp;&nbsp;&nbsp;&nbsp;</label>2800區</a><br><br>
-          <a href="#" class="seats_content"><label class="box15">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅1E區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box16">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅2B區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box17">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅2C區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box18">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅2D區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box19">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫1E區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box20">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫2B區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box21">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫2C區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box22">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫2D區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box23">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃2B區2800</a><br><br>
-          <a href="#" class="seats_content"><label class="box24">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃2D區2800</a><br><br>
+          <span v-for="item in selectSeats2800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
           <a href="#" class="seats_tittle"><label class="box25">&nbsp;&nbsp;&nbsp;&nbsp;</label>2400區</a><br><br>
-          <a href="#" class="seats_content"><label class="box26">&nbsp;&nbsp;&nbsp;&nbsp;</label>紅2E區2400</a><br><br>
-          <a href="#" class="seats_content"><label class="box27">&nbsp;&nbsp;&nbsp;&nbsp;</label>紫2E區2400</a><br><br>
-          <a href="#" class="seats_content"><label class="box28">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃2A區2400</a><br><br>
-          <a href="#" class="seats_content"><label class="box29">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃2E區2400</a><br><br>
+          <span v-for="item in selectSeats2400"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
           <a href="#" class="seats_tittle"><label class="box30">&nbsp;&nbsp;&nbsp;&nbsp;</label>2000區</a><br><br>
-          <a href="#" class="seats_content"><label class="box31">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3C區2000</a><br><br>
-          <a href="#" class="seats_content"><label class="box32">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3D區2000</a><br><br>
-          <a href="#" class="seats_content"><label class="box33">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3E區2000</a><br><br>
-          <a href="#" class="seats_content"><label class="box34">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3F區2000</a><br><br>
-          <a href="#" class="seats_content"><label class="box35">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3G區2000</a><br><br>
-          <a href="#" class="seats_content"><label class="box36">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3H區2000</a><br><br>
+          <span v-for="item in selectSeats2000"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
           <a href="#" class="seats_tittle"><label class="box37">&nbsp;&nbsp;&nbsp;&nbsp;</label>1600區</a><br><br>
-          <a href="#" class="seats_content"><label class="box38">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3A區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box39">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3B區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box40">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3C區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box41">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3D區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box42">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3E區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box43">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3F區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box44">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3G區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box45">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3H區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box46">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3I區1600</a><br><br>
-          <a href="#" class="seats_content"><label class="box47">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3J區1600</a><br><br>
+          <span v-for="item in selectSeats1600"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
           <a href="#" class="seats_tittle"><label class="box48">&nbsp;&nbsp;&nbsp;&nbsp;</label>800區</a><br><br>
-          <a href="#" class="seats_content"><label class="box49">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3C區800</a><br><br>
-          <a href="#" class="seats_content"><label class="box50">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3D區800</a><br><br>
-          <a href="#" class="seats_content"><label class="box51">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3E區800</a><br><br>
-          <a href="#" class="seats_content"><label class="box52">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3E區800</a><br><br>
-          <a href="#" class="seats_content"><label class="box53">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3F區800</a><br><br>
-          <a href="#" class="seats_content"><label class="box54">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3G區800</a><br><br>
-          <a href="#" class="seats_content"><label class="box55">&nbsp;&nbsp;&nbsp;&nbsp;</label>黃3H區800</a>
+          <span v-for="item in selectSeats800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
         </div>
       </div>
       <div class="ai1_content">
@@ -88,37 +49,205 @@ export default {
             selectSeats4200:[
                 {
                     seat: '特A1區4200',
+                    color: 'rgb(37, 78, 160)'
                 },
                 {
                     seat: '特A2區4200',
+                    color: 'rgb(37, 78, 160)'
                 }
             ],
             selectSeats3800:[
                 {
                     seat: '特B區3800',
+                    color: 'rgb(75, 111, 175)'
                 }
             ],
             selectSeats3200:[
                 {
                     seat: '紅1B區3200',
+                    color: 'rgb(230, 40, 138)'
                 },
                 {
                     seat: '紅1C區3200',
+                    color: 'rgb(230, 40, 138)'
                 },
                 {
                     seat: '紅1D區3200',
+                    color: 'rgb(230, 40, 138)'
                 },
                 {
                     seat: '紫1B區3200',
+                    color: 'rgb(161, 85, 157)'
                 },
                 {
                     seat: '紫1C區3200',
+                    color: 'rgb(161, 85, 157)'
                 },
                 {
                     seat: '紫1D區3200',
+                    color: 'rgb(161, 85, 157)'
                 },
                 {
                     seat: '黃2C區3200',
+                    color: 'rgb(190, 115, 26)'
+                },
+            ],
+            selectSeats2800:[
+                {
+                    seat: '紅1E區2800',
+                    color: 'rgb(231, 151, 191)'
+                },
+                {
+                    seat: '紅2B區2800',
+                    color: 'rgb(231, 151, 191)'
+                },
+                {
+                    seat: '紅2C區2800',
+                    color: 'rgb(231, 151, 191)'
+                },
+                {
+                    seat: '紅2D區2800',
+                    color: 'rgb(231, 151, 191)'
+                },
+                {
+                    seat: '紫1E區2800',
+                    color: 'rgb(183, 159, 199)'
+                },
+                {
+                    seat: '紫2B區2800',
+                    color: 'rgb(183, 159, 199)'
+                },
+                {
+                    seat: '紫2C區2800',
+                    color: 'rgb(183, 159, 199)'
+                },
+                {
+                    seat: '紫2D區2800',
+                    color: 'rgb(183, 159, 199)'
+                },
+                {
+                    seat: '黃2B區2800',
+                    color: 'rgb(228, 146, 31)'
+                },
+                {
+                    seat: '黃2D區2800',
+                    color: 'rgb(228, 146, 31)'
+                },
+            ],
+            selectSeats2400:[
+                {
+                    seat: '紅2E區2400',
+                    color: 'rgb(231, 22, 26)'
+                },
+                {
+                    seat: '紫2E區2400',
+                    color: 'rgb(101, 60, 148)'
+                },
+                {
+                    seat: '黃2A區2400',
+                    color: 'rgb(236, 187, 74)'
+                },
+                {
+                    seat: '黃2E區2400',
+                    color: 'rgb(236, 187, 74)'
+                },
+            ],
+            selectSeats2000:[
+                {
+                    seat: '黃3C區2000',
+                    color: 'rgb(242, 201, 32)'
+                },
+                {
+                    seat: '黃3D區2000',
+                    color: 'rgb(242, 201, 32)'
+                },
+                {
+                    seat: '黃3E區2000',
+                    color: 'rgb(242, 201, 32)'
+                },
+                {
+                    seat: '黃3F區2000',
+                    color: 'rgb(242, 201, 32)'
+                },
+                {
+                    seat: '黃3G區2000',
+                    color: 'rgb(242, 201, 32)'
+                },
+                {
+                    seat: '黃3H區2000',
+                    color: 'rgb(242, 201, 32)'
+                },
+            ],
+            selectSeats1600:[
+                {
+                    seat: '黃3A區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3B區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3C區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3D區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3E區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3F區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3G區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3H區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3I區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+                {
+                    seat: '黃3J區1600',
+                    color: 'rgb(255, 241, 0)'
+                },
+            ],
+            selectSeats800:[
+                {
+                    seat: '黃3C區800',
+                    color: 'rgb(243, 236, 144)'
+                },
+                {
+                    seat: '黃3D區800',
+                    color: 'rgb(243, 236, 144)'
+                },
+                {
+                    seat: '黃3E區800',
+                    color: 'rgb(243, 236, 144)'
+                },
+                {
+                    seat: '黃3E區800',
+                    color: 'rgb(243, 236, 144)'
+                },
+                {
+                    seat: '黃3F區800',
+                    color: 'rgb(243, 236, 144)'
+                },
+                {
+                    seat: '黃3G區800',
+                    color: 'rgb(243, 236, 144)'
+                },
+                {
+                    seat: '黃3H區800',
+                    color: 'rgb(243, 236, 144)'
                 },
             ]
         }
@@ -198,98 +327,53 @@ div.ai1_img{
 .seats_content:hover{
     background-color: rgb(205, 205, 205);
 }
-.box1, .box2, .box3{
+.box{
+    border-radius: 3px;;
+    margin-right: 5px;
+}
+.box1{
     border-radius: 3px;
     background-color: rgb(37, 78, 160);
     color: rgb(37, 78, 160);
     margin-right: 5px;
 }
-
-.box4, .box5{
+.box4{
     border-radius: 3px;
     background-color: rgb(75, 111, 175);
     color: rgb(75, 111, 175);
     margin-right: 5px;
 }
-
-.box6, .box7, .box8, .box9{
+.box6{
     border-radius: 3px;
     background-color: rgb(230, 40, 138);
     color: rgb(230, 40, 138);
     margin-right: 5px;
 }
-
-.box10, .box11, .box12{
-    border-radius: 3px;
-    background-color: rgb(161, 85, 157);
-    color: rgb(161, 85, 157);
-    margin-right: 5px;
-}
-
-.box13{
-    border-radius: 3px;
-    background-color: rgb(190, 115, 26);
-    color: rgb(190, 115, 26);
-    margin-right: 5px;
-}
-
-.box14, .box15, .box16, .box17, .box18{
+.box14{
     border-radius: 3px;
     background-color: rgb(231, 151, 191);
     color: rgb(231, 151, 191);
     margin-right: 5px;
 }
-
-.box19, .box20, .box21, .box22{
-    border-radius: 3px;
-    background-color: rgb(183, 159, 199);
-    color: rgb(183, 159, 199);
-    margin-right: 5px;
-}
-
-.box23, .box24{
+.box25{
     border-radius: 3px;
     background-color: rgb(231, 22, 26);
     color: rgb(231, 22, 26);
     margin-right: 5px;
 }
-
-.box25, .box26{
-    border-radius: 3px;
-    background-color: rgb(228, 146, 31);
-    color: rgb(228, 146, 31);
-    margin-right: 5px;
-}
-
-.box27{
-    border-radius: 3px;
-    background-color: rgb(101, 60, 148);
-    color: rgb(101, 60, 148);
-    margin-right: 5px;
-}
-
-.box28, .box29{
-    border-radius: 3px;
-    background-color: rgb(236, 187, 74);
-    color: rgb(236, 187, 74);
-    margin-right: 5px;
-}
-
-.box30, .box31, .box32, .box33, .box34, .box35, .box36{
+.box30{
     border-radius: 3px;
     background-color: rgb(242, 201, 32);
     color: rgb(242, 201, 32);
     margin-right: 5px;
 }
-
-.box37, .box38, .box39, .box40, .box41, .box42, .box43, .box44, .box45, .box46, .box47{
+.box37{
     border-radius: 3px;
     background-color: rgb(255, 241, 0);
     color: rgb(255, 241, 0);
     margin-right: 5px;
 }
-
-.box48, .box49, .box50, .box51, .box52, .box53, .box54, .box55{
+.box48{
     border-radius: 3px;
     background-color: rgb(243, 236, 144);
     color: rgb(243, 236, 144);
