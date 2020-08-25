@@ -12,7 +12,7 @@
         <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
         <router-link :to="{name:'ProgramsSelectSeats', params:{ id:$route.params.id }}" class="book_rightnow">立即訂購</router-link>
         <div @click="seeDetail" class="ai1_quastion_list">
-          <div class="rectangle"></div>節目資訊<img class="triangle_right preopen" src="../assets/img/triangle_right2.png">
+          <div class="rectangle"></div>節目資訊<img :class="{ rotateTriangle:isrotateTriangle }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
         <p :class="{ preopen:ispreopen }" class="ai1_quastion_list_answer">出道十八年，戴愛玲唱了無數關於「愛」的歌曲，<br>
           首首都是我們在KTV裡必點的招牌熱唱歌。<br><br>
@@ -46,11 +46,11 @@
           場地示意圖：<br>
           <img class="egg_seat" src="../assets/img/egg_seat.png" alt=""> </p>
         <div @click="seeDetail2" class="ai1_quastion_list">
-          <div class="rectangle"></div>場次<img class="triangle_right" src="../assets/img/triangle_right2.png">
+          <div class="rectangle"></div>場次<img :class="{ rotateTriangle:isrotateTriangle2 }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
         <p :class="{ preopen2:ispreopen2 }" class="ai1_quastion_list_answer">2020/05/23(六)19:30 台北小巨蛋</p>
         <div @click="seeDetail3" class="ai1_quastion_list">
-          <div class="rectangle"></div>購票方式<img class="triangle_right" src="../assets/img/triangle_right2.png">
+          <div class="rectangle"></div>購票方式<img :class="{ rotateTriangle:isrotateTriangle3 }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
         <p :class="{ preopen3:ispreopen3 }" class="ai1_quastion_list_answer">1.&nbsp; 每人限購4張，可支援行動裝置購票。購票時可選擇【電腦配位】加速購票流程。<br>
           2.&nbsp;付款方式可選擇【ibon付款】或【線上刷卡】。<br>
@@ -71,7 +71,7 @@
           &nbsp;&nbsp;&nbsp;查詢"核對訂購內容，台端不得以任何理由拒付本次交易費用。(如需退票，請另依退<br>
           &nbsp;&nbsp;&nbsp;票規則辦理。)</p>
         <div @click="seeDetail4" class="ai1_quastion_list">
-          <div class="rectangle"></div>取票方式<img class="triangle_right" src="../assets/img/triangle_right2.png">
+          <div class="rectangle"></div>取票方式<img :class="{ rotateTriangle:isrotateTriangle4 }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
         <p :class="{ preopen4:ispreopen4 }" class="ai1_quastion_list_answer">1. 取票方式為【ibon取票】，取票時每筆將酌收$30手續費，於7-11超商門市付款時以<br>
           &nbsp;&nbsp;&nbsp;現金方式支付。<br>
@@ -85,13 +85,13 @@
           5.&nbsp;ibon票券為感熱紙張，請妥善保管，並遠離熱源，避免紙張整張變黑，造成辨識不易<br>
           &nbsp;&nbsp;&nbsp;，影響您的入場。</p>
         <div @click="seeDetail5" class="ai1_quastion_list">
-          <div class="rectangle"></div>退票方式<img class="triangle_right" src="../assets/img/triangle_right2.png">
+          <div class="rectangle"></div>退票方式<img :class="{ rotateTriangle:isrotateTriangle5 }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
         <p :class="{ preopen5:ispreopen5 }" class="ai1_quastion_list_answer">本節目退換票請依照iconcert網站退票方案一規定辦理<br>
           開演前10日內(不含演出當日)恕不接受退換票，退票期限為5/12， 退換票均需酌收票面<br>
           價10%手續費。 </p>
         <div @click="seeDetail6" class="ai1_quastion_list">
-          <div class="rectangle"></div>注意事項<img class="triangle_right" src="../assets/img/triangle_right2.png">
+          <div class="rectangle"></div>注意事項<img :class="{ rotateTriangle:isrotateTriangle6 }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
         <p :class="{ preopen6:ispreopen6 }" class="ai1_quastion_list_answer">110 公分以下兒童不得入場</p>
       </div>
@@ -114,26 +114,38 @@ export default {
             ispreopen4: false,
             ispreopen5: false,
             ispreopen6: false,
+            isrotateTriangle: false,
+            isrotateTriangle2: true,
+            isrotateTriangle3: true,
+            isrotateTriangle4: true,
+            isrotateTriangle5: true,
+            isrotateTriangle6: true,
         }
     },
     methods: {
         seeDetail () {
             this.ispreopen = !this.ispreopen
+            this.isrotateTriangle = !this.isrotateTriangle
         },
         seeDetail2 () {
             this.ispreopen2 = !this.ispreopen2
+            this.isrotateTriangle2 = !this.isrotateTriangle2
         },
         seeDetail3 () {
             this.ispreopen3 = !this.ispreopen3
+            this.isrotateTriangle3 = !this.isrotateTriangle3
         },
         seeDetail4 () {
             this.ispreopen4 = !this.ispreopen4
+            this.isrotateTriangle4 = !this.isrotateTriangle4
         },
         seeDetail5 () {
             this.ispreopen5 = !this.ispreopen5
+            this.isrotateTriangle5 = !this.isrotateTriangle5
         },
         seeDetail6 () {
             this.ispreopen6 = !this.ispreopen6
+            this.isrotateTriangle6 = !this.isrotateTriangle6
         }
     }
 }
@@ -235,7 +247,7 @@ img.ai{
     transform: translateY(-50%);
     background-color: black;
 }
-img.triangle_right{
+.triangle_right{
     position: absolute;
     width: 10px;
     right: 15px;
@@ -243,14 +255,8 @@ img.triangle_right{
     transform: translateY(-50%);
     transition: .5s;
 }
-.click_me_to_span_hide img.triangle_right{
+.rotateTriangle{
     transform: translateY(-50%) rotate(90deg);
-}
-img.preopen{
-    transform: translateY(-50%) rotate(90deg);
-}
-.click_me_to_span_hide img.preopen{
-    transform: translateY(-50%) rotate(0deg);
 }
 .ai1_quastion_list_answer{
     /* border: 1px solid darkgreen; */
@@ -269,8 +275,8 @@ img.preopen{
     animation: fadeEffect 1s;
 }
 @keyframes fadeEffect {
-  from {opacity: .5;}
-  to {opacity: 1;}
+    from {opacity: .5;}
+    to {opacity: 1;}
 }
 .preopen, .preopen2, .preopen3, .preopen4, .preopen5, .preopen6{
     display: block;
