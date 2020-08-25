@@ -4,37 +4,37 @@
     <h2>&nbsp;&nbsp;節目資訊</h2>
     <hr>
     <br>
-    <div class="ai1">
-      <div class="ai1_img">
-        <img class="ai" :src="programsData.programs[$route.params.id].bgPhoto"><br>
-        <p class="ai1_imgP">請選擇區域！</p>
-        <div class="seats_selection">
-          <a href="#" class="seats_tittle"><label class="box1">&nbsp;&nbsp;&nbsp;&nbsp;</label>4200區</a><br><br>
-          <span v-for="item in selectSeats4200"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }}</a><br><br></span>
-          <a href="#" class="seats_tittle"><label class="box4">&nbsp;&nbsp;&nbsp;&nbsp;</label>3800區</a><br><br>
-          <span v-for="item in selectSeats3800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-          <a href="#" class="seats_tittle"><label class="box6">&nbsp;&nbsp;&nbsp;&nbsp;</label>3200區</a><br><br>
-          <span v-for="item in selectSeats3200"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-          <a href="#" class="seats_tittle"><label class="box14">&nbsp;&nbsp;&nbsp;&nbsp;</label>2800區</a><br><br>
-          <span v-for="item in selectSeats2800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-          <a href="#" class="seats_tittle"><label class="box25">&nbsp;&nbsp;&nbsp;&nbsp;</label>2400區</a><br><br>
-          <span v-for="item in selectSeats2400"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-          <a href="#" class="seats_tittle"><label class="box30">&nbsp;&nbsp;&nbsp;&nbsp;</label>2000區</a><br><br>
-          <span v-for="item in selectSeats2000"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-          <a href="#" class="seats_tittle"><label class="box37">&nbsp;&nbsp;&nbsp;&nbsp;</label>1600區</a><br><br>
-          <span v-for="item in selectSeats1600"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-          <a href="#" class="seats_tittle"><label class="box48">&nbsp;&nbsp;&nbsp;&nbsp;</label>800區</a><br><br>
-          <span v-for="item in selectSeats800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+      <div class="ai1">
+        <div class="ai1_img">
+            <img class="ai" :src="programsData.programs[$route.params.id].bgPhoto"><br>
+            <p class="ai1_imgP">請選擇區域！</p>
+            <div class="seats_selection">
+            <a href="#" class="seats_tittle"><label class="box1">&nbsp;&nbsp;&nbsp;&nbsp;</label>4200區</a><br><br>
+            <router-link :to="{name:'ProgramsSelectAmount', params:{ id:$route.params.id }}" v-for="(item, index) in selectSeats4200"><a class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }}</a><br><br></router-link>
+            <a href="#" class="seats_tittle"><label class="box4">&nbsp;&nbsp;&nbsp;&nbsp;</label>3800區</a><br><br>
+            <span v-for="item in selectSeats3800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seats_tittle"><label class="box6">&nbsp;&nbsp;&nbsp;&nbsp;</label>3200區</a><br><br>
+            <span v-for="item in selectSeats3200"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seats_tittle"><label class="box14">&nbsp;&nbsp;&nbsp;&nbsp;</label>2800區</a><br><br>
+            <span v-for="item in selectSeats2800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seats_tittle"><label class="box25">&nbsp;&nbsp;&nbsp;&nbsp;</label>2400區</a><br><br>
+            <span v-for="item in selectSeats2400"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seats_tittle"><label class="box30">&nbsp;&nbsp;&nbsp;&nbsp;</label>2000區</a><br><br>
+            <span v-for="item in selectSeats2000"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seats_tittle"><label class="box37">&nbsp;&nbsp;&nbsp;&nbsp;</label>1600區</a><br><br>
+            <span v-for="item in selectSeats1600"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seats_tittle"><label class="box48">&nbsp;&nbsp;&nbsp;&nbsp;</label>800區</a><br><br>
+            <span v-for="item in selectSeats800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            </div>
+        </div>
+        <div class="ai1_content">
+            <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
+            <a class="detail" href="#">查看詳情</a>
+            <img class="step1" src="../assets/img/step1.svg">
+            <p class="seatsRef">座位區參考圖：</p>
+            <img class="egg_seat" src="../assets/img/egg_seat.png">
         </div>
       </div>
-      <div class="ai1_content">
-        <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
-        <a class="detail" href="#">查看詳情</a>
-        <img class="step1" src="../assets/img/step1.svg">
-        <p class="seatsRef">座位區參考圖：</p>
-        <img class="egg_seat" src="../assets/img/egg_seat.png">
-      </div>
-     </div>
     </div>
   </div>   
 </template>
@@ -259,6 +259,9 @@ export default {
 </script>
 
 <style scoped>
+a{
+    text-decoration-line: none;
+}
 .program-bg{
     background-color: rgb(245, 245, 245);
     padding-bottom: 150px;
@@ -276,7 +279,7 @@ export default {
 .program > hr{
     border-top: 1px dashed gray;
 }
-/* ==========內容=================================================== */
+/* ==========內容============================ */
 div.ai1{
     width: 1200px;
     margin: 0 auto;
