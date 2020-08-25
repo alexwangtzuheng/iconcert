@@ -105,11 +105,14 @@ input {
     text-align: center;
 }
 .ai{
-    width: 400px;
+    border: 1px solid lightgray;
+    width: 450px;
+    margin-left: 20px;
 }
 img.egg_seat{
     margin-top: 50px;
-    width: 400px;
+    margin-left: 20px;
+    width: 430px;
     border: 1px solid lightgray;
 }
 
@@ -123,7 +126,7 @@ img.egg_seat{
     /* border: 1px solid orange; */
     width: 650px;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 35px;
     margin-left: 10px;
 }
 .step2{
@@ -136,7 +139,7 @@ img.egg_seat{
     width: 600px;
     font-size: 20px;
     margin-top: 100px;
-    margin-left: 10px;
+    margin-left: 20px;
     border-radius: 5px;
     position: relative;
 }

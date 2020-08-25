@@ -29,7 +29,7 @@
         </div>
         <div class="ai1_content">
             <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
-            <a class="detail" href="#">查看詳情</a>
+            <router-link :to="{name:'ProgramsDetail', params:{ id:$route.params.id }}" class="detail" href="#">查看詳情</router-link>
             <img class="step1" src="../assets/img/step1.svg">
             <p class="seatsRef">座位區參考圖：</p>
             <img class="egg_seat" src="../assets/img/egg_seat.png">
@@ -291,19 +291,22 @@ div.ai1_img{
     text-align: center;
 }
 .ai{
-    width: 400px;
+    border: 1px solid lightgray;
+    width: 430px;
+    margin-left: 20px;
 }
 .ai1_imgP{
     font-size: 18px;
     color: red;
     margin-top: 20px;
+    margin-left: 20px;
 }
 .seats_selection{
-    /* border: 1px solid orange; */
     margin-top: 30px;
     font-size: 14px;
     text-align: left;
     transform: translateX(15%);
+    margin-left: 40px;
 }
 .seats_tittle{
     text-decoration: none;
@@ -393,7 +396,7 @@ div.ai1_img{
     /* border: 1px solid orange; */
     width: 480px;
     font-size: 25px;
-    line-height: 30px;
+    line-height: 35px;
     margin-left: 10px;
     display: inline-block;
 }
@@ -408,6 +411,7 @@ div.ai1_img{
     display: inline-block;
     padding: 10px 20px 10px;
     text-decoration: none;
+    font-weight: bold;
     text-align: center;
     transform: translateY(-25%);
 }

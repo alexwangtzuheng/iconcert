@@ -1,7 +1,7 @@
 <template>
   <div class="program-bg"> 
     <div class="program">
-    <h2 @click="qwe">&nbsp;&nbsp;節目資訊</h2>
+    <h2>&nbsp;&nbsp;節目資訊</h2>
     <hr>
     <br>
     <div class="ai1">
@@ -10,7 +10,7 @@
       </div>
       <div class="ai1_content">
         <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
-        <router-link :to="'/programs/selectSeats'" class="book_rightnow">立即訂購</router-link>
+        <router-link :to="{name:'ProgramsSelectSeats', params:{ id:$route.params.id }}" class="book_rightnow">立即訂購</router-link>
         <div @click="seeDetail" class="ai1_quastion_list">
           <div class="rectangle"></div>節目資訊<img class="triangle_right preopen" src="../assets/img/triangle_right2.png">
         </div>
@@ -165,7 +165,7 @@ export default {
     position: relative;
 }
 .ai1_img{
-    /* border: 1px solid blue; */
+    /* border: 1px solid lightgray; */
     display: inline-block;
     font-size: 0;
     text-align: center;
@@ -174,7 +174,8 @@ export default {
     top: 0;
 }
 img.ai{
-    width: 450px;
+    border: 1px solid lightgray;
+    width: 430px;
 }
 .ai1_content{
     display: inline-block;
@@ -200,26 +201,24 @@ img.ai{
     display: inline-block;
     padding: 10px 20px 10px;
     text-decoration: none;
-    font-family: Microsoft JhengHei;
     font-weight: bold;
-    letter-spacing: .5px;
     text-align: center;
-    transform: translateY(-25%);
+    transform: translateY(-25%) translateX(5px);
 }
 .book_rightnow:hover{
     background-color: rgb(185, 15, 15);
 }
 .ai1_quastion_list{
     /* border: 1px solid lightgray; */
+    width: 640px;
     margin: 10px;
     margin-bottom: 0;
+    margin-left: 0;
     padding: 10px;
     padding-left: 20px;
     background-color: rgb(230, 230, 230);
     color: black;
-    font-family: Microsoft JhengHei;
     font-size: 16px;
-    letter-spacing: .5px;
     position: relative;
     cursor: pointer;
     border-bottom: 1px solid lightgray;
@@ -255,8 +254,10 @@ img.preopen{
 }
 .ai1_quastion_list_answer{
     /* border: 1px solid darkgreen; */
+    width: 640px;
     margin: 10px;
     margin-top: 0;
+    margin-left: 0;
     padding: 10px;
     padding-left: 20px;
     background-color: white;
