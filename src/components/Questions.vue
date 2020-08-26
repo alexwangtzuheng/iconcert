@@ -1,20 +1,20 @@
 <template>
-  <div class="question-bg">
+  <div class="questionBg">
     <div class="question">
-      <h2>&nbsp;&nbsp;常見問題</h2>
+      <h2 class="questionTitle">&nbsp;&nbsp;常見問題</h2>
       <hr>
-      <div class="question_buttom">
+      <div class="questionButtom">
         <!-- left aside -->
         <div class="allbox">
-          <div class="buy_ticket">
+          <div class="buyTicket">
             <div class="bottom_line"></div>
             <a href="#"><img src="../assets/img/buy.png"></a>
           </div>
-          <div class="take_ticket">
+          <div class="takeTicket">
             <div class="bottom_line"></div>
             <a href="#"><img src="../assets/img/take_ticket.png"></a>
           </div>
-          <div class="return_ticket">
+          <div class="returnTicket">
             <div class="bottom_line"></div>
             <a href="#"><img src="../assets/img/return_ticket.png"></a>
           </div>
@@ -24,7 +24,7 @@
           </div>
         </div>
         <!-- right aside -->
-        <div class="buy_detail">
+        <div class="buyDetail">
           <div v-for="(item, index) in questionLists">
             <img class="tri" src="../assets/img/tri.png">
             <div @click="seeAnswer(index)" class="buy_quastion_list">
@@ -136,7 +136,7 @@ export default {
 </script>
 
 <style scoped>
-.question-bg{
+.questionBg{
     background-color: rgb(245, 245, 245);
     padding-bottom: 150px;
 }
@@ -146,14 +146,13 @@ export default {
     margin: 0 auto;
     padding-top: 50px;
 }
-.question> h2{
+.questionTitle{
     font-size: 24px;
 }
 .question > hr{
     border-top: 1px dashed gray;
 }
-.question_buttom{
-    /* border: 1px solid blue; */
+.questionButtom{
     width: 1200px;
     margin: 0 auto;
     margin-top: 50px;
@@ -167,7 +166,7 @@ export default {
     left: 20px;
     top: 0px;
 }
-.buy_ticket{
+.buyTicket{
     box-sizing: border-box;
     display: block;
     width: 150px;
@@ -178,7 +177,7 @@ export default {
     cursor: pointer;
     box-shadow: 0px 0px 3px 0px;
 }
-.buy_detail{
+.buyDetail{
     /* border: 1px solid blue; */
     width: 900px;
     border-radius: 10px;
@@ -188,16 +187,16 @@ export default {
     background-color: white;
     position: relative;
 }
-.buy_ticket > a{
+.buyTicket > a{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 5%;
 }
-.buy_ticket > a > img{
+.buyTicket > a > img{
     width: 65px;
 }
-.take_ticket{
+.takeTicket{
     border: 1px solid lightgray;
     box-sizing: border-box;
     display: block;
@@ -208,19 +207,19 @@ export default {
     margin-top: 5px;
     cursor: pointer;
 }
-.take_ticket:hover{
+.takeTicket:hover{
     box-shadow: 0px 0px 3px 0px;
 }
-.take_ticket > a{
+.takeTicket > a{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 5%;
 }
-.take_ticket > a > img{
+.takeTicket > a > img{
     width: 82px;
 }
-.return_ticket{
+.returnTicket{
     border: 1px solid lightgray;
     box-sizing: border-box;
     display: block;
@@ -231,16 +230,16 @@ export default {
     margin-top: 5px;
     cursor: pointer;
 }
-.return_ticket:hover{
+.returnTicket:hover{
     box-shadow: 0px 0px 3px 0px;
 }
-.return_ticket > a{
+.returnTicket > a{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: -2%;
 }
-.return_ticket > a > img{
+.returnTicket > a > img{
     width: 100px;
 }
 .other{

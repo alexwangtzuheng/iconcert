@@ -1,26 +1,26 @@
 <template>
-    <div class="order-bg">
-        <div class="order">
-            <h2>&nbsp;&nbsp;訂單查詢</h2>
-            <hr>
-            <br>
-            <table class="cart">
-              <tr>
-                <th width="180px">訂單編號</th>
-                <th width="180px">訂購時間</th>
-                <th width="580px">購買節目</th>
-                <th width="180px">訂單狀態</th>
-              </tr>
-              <tr>
-                <td width="180px">-</td>
-                <td width="180px">-</td>
-                <td width="580px">-</td>
-                <td width="180px">-</td>
-              </tr>
-            </table>
-            <p class="please_login">※請先登入後才能查看訂購資訊喔！</p>
-        </div>
+  <div class="orderBg">
+    <div class="order">
+      <h2 class="orderTitle">&nbsp;&nbsp;訂單查詢</h2>
+      <hr>
+      <br>
+      <table class="cart">
+        <tr>
+          <th width="180px">訂單編號</th>
+          <th width="180px">訂購時間</th>
+          <th width="580px">購買節目</th>
+          <th width="180px">訂單狀態</th>
+        </tr>
+        <tr>
+          <td width="180px">-</td>
+          <td width="180px">-</td>
+          <td width="580px">-</td>
+          <td width="180px">-</td>
+        </tr>
+      </table>
+      <p class="pleaseLogin">※請先登入後才能查看訂購資訊喔！</p>
     </div>
+  </div>
 </template>
 
 <script>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-.order-bg{
+.orderBg{
     background-color: rgb(245, 245, 245);
     padding-bottom: 150px;
 }
@@ -41,13 +41,13 @@ export default {
     margin: 0 auto;
     padding-top: 50px;
 }
-.order> h2{
+.orderTitle{
     font-size: 24px;
 }
 .order > hr{
     border-top: 1px dashed gray;
 }
-.cart{
+table.cart{
     width: 1200px;
     border: 2px solid lightgray;
     border-collapse: collapse;
@@ -64,11 +64,11 @@ table td, table th{
     text-align: center;
 }
 table th{
-  background-color: rgb(230, 230, 230);
+    background-color: rgb(230, 230, 230);
 }
-.please_login{
-  color: red;
-  font-size: 18px;
-  text-align: center;
+.pleaseLogin{
+    color: red;
+    font-size: 18px;
+    text-align: center;
 }
 </style>

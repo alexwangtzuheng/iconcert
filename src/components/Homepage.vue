@@ -2,9 +2,9 @@
   <div class="homepage">
     <!-- banner -->
     <div class="banner" id="banner">
-      <div class="banner-search">
-        <input type="text" placeholder="searching for...">
-        <button>搜尋</button>
+      <div class="bannerSearch">
+        <input class="bannerSearchBar" type="text" placeholder="searching for...">
+        <button class="bannerSearchBtn">搜尋</button>
       </div> 
       <section class="scrollDownBtn">
         <a @click="scrollDown"><span></span></a>
@@ -12,16 +12,16 @@
     </div>
 
     <!-- 2nd-screen -->
-    <div class="secondScreen-bg">
+    <div class="secondScreenBg">
       <div class="secondScreen" id="secondScreen">
-        <h2>最新消息</h2>
+        <h2 class="secondScreenTitle">最新消息</h2>
         <hr>
-        <div class="secondScreen-news">
-          <div class="secondScreen-newsLeft">
-            <div class="secondScreen-newsLeftContent" v-for="item in newsLefts"><img src="../assets/img/ticket.png">[{{item.type}}]&nbsp;{{item.content}}</div>
+        <div class="secondScreenNews">
+          <div class="secondScreenNewsLeft">
+            <div class="secondScreenNewsLeftContent" v-for="item in newsLefts"><img src="../assets/img/ticket.png">[{{item.type}}]&nbsp;{{item.content}}</div>
           </div>
-          <div class="secondScreen-newsRight">
-            <div class="secondScreen-newsRightContent" v-for="item in newsRights"><img src="../assets/img/ticket.png">[{{item.type}}]&nbsp;{{item.content}}</div>
+          <div class="secondScreenNewsRight">
+            <div class="secondScreenNewsRightContent" v-for="item in newsRights"><img src="../assets/img/ticket.png">[{{item.type}}]&nbsp;{{item.content}}</div>
           </div>
         </div>
       </div>
@@ -29,25 +29,25 @@
 
     <!-- 3rd-screen -->
     <div class="thirdScreen">
-      <h2>節目資訊</h2>
+      <h2 class="thirdScreenTitle">節目資訊</h2>
       <hr>
       <div class="box" v-for="item in programs">
         <div class="boxMask" :style="{backgroundImage:'url(' +item.bgPhoto+ ')'}"></div>
         <!-- right -->
-        <div v-if="item.place == 'right'" class="boxContent" :style="{backgroundImage:'url(' +item.photo+ ')'}"></div>
-        <div v-if="item.place == 'right'" class="textContent">
+        <div v-if="item.place == 'right'" class="boxContentRight" :style="{backgroundImage:'url(' +item.photo+ ')'}"></div>
+        <div v-if="item.place == 'right'" class="textContentRight">
           <div class="maskContent"></div>
-          <p>{{item.time}}<br>{{item.name}}<br></p>
-          <a class="book_rightnow">立即訂購</a>
-          <a class="check_detail">查看詳情</a>
+          <p class="textContentTitle">{{item.time}}<br>{{item.name}}<br></p>
+          <a class="bookRightnow">立即訂購</a>
+          <a class="checkDetail">查看詳情</a>
         </div>
         <!-- left -->
-        <div v-if="item.place == 'left'" class="boxContent2" :style="{backgroundImage:'url(' +item.photo+ ')'}"></div>
-        <div v-if="item.place == 'left'" class="textContent2">
+        <div v-if="item.place == 'left'" class="boxContentLeft" :style="{backgroundImage:'url(' +item.photo+ ')'}"></div>
+        <div v-if="item.place == 'left'" class="textContentLeft">
           <div class="maskContent"></div>
-          <p>{{item.time}}<br>{{item.name}}<br></p>
-          <a class="book_rightnow">立即訂購</a>
-          <a class="check_detail">查看詳情</a>
+          <p class="textContentTitle">{{item.time}}<br>{{item.name}}<br></p>
+          <a class="bookRightnow">立即訂購</a>
+          <a class="checkDetail">查看詳情</a>
         </div>
       </div>
     </div>
@@ -150,19 +150,17 @@ export default {
     background-position: center;
     background-size: cover;
 }
-.banner-search{
-    /* border: 1px solid red; */
+.bannerSearch{
     text-align: center;
     width: 520px;
     height: 80px;
     margin: 0 auto;
-    /* margin-top: 65vh; */
     transform: translateY(60vh);
     padding-top: 22px;
     background-color: rgba(255,255,255,.7);
     border-radius: 5px;
 }
-.banner-search > input{
+.bannerSearchBar{
     position: relative;
     width: 400px;
     padding: 6px 8px;
@@ -171,7 +169,7 @@ export default {
     border: 1px solid gray;
     font-size: 16px;
 }
-.banner-search > button{
+.bannerSearchBtn{
     font-size: 16px;
     height: 36px;
     width: 80px;
@@ -182,7 +180,7 @@ export default {
     transition-duration: .3s;
     border-radius: 3px;
 }
-.banner-search > button:hover{
+.bannerSearchBtn:hover{
     background-color: rgb(54,54,199);
     cursor: pointer;
 }
@@ -268,44 +266,40 @@ export default {
     }
 }
 
-
 /* 2nd-screen */
-.secondScreen-bg{
-    /* border: 1px solid red; */
+.secondScreenBg{
     background-color: rgb(233, 233, 233);
 }
 .secondScreen{
-    /* border: 1px solid red; */
     width: 1200px;
     margin: 0 auto;
     padding: 50px 0;
 }
-.secondScreen > h2{
+h2.secondScreenTitle{
     font-size: 24px;
     margin-left: 100px;
 }
 .secondScreen > hr{
     border-top: 1px dashed gray;
 }
-.secondScreen-news{
-    /* border: 1px solid red; */
+.secondScreenNews{
     width: 1000px;
     margin: 0 auto;
     font-size: 16px;
     color: rgb(16, 105, 189);
 }
-.secondScreen-newsLeft, .secondScreen-newsRight{
+.secondScreenNewsLeft, .secondScreenNewsRight{
     width: 47.5%;
     display: inline-block;
     vertical-align: top;
     margin: 0 1%;
 }
-.secondScreen-newsLeft img, .secondScreen-newsRight img{
+.secondScreenNewsLeft img, .secondScreenNewsRight img{
     width: 20px;
     transform: translateY(3px);
     margin-right: 5px;
 }
-.secondScreen-newsLeftContent{
+.secondScreenNewsLeftContent{
     border-bottom: 1px solid gray;
     padding: 8px 0 3px 0;
     transition-duration: .3s;
@@ -314,24 +308,23 @@ export default {
     color: rgb(13, 81, 145);
     cursor: pointer;
 }
-.secondScreen-newsRightContent{
+.secondScreenNewsRightContent{
     border-bottom: 1px solid gray;
     padding: 8px 0 3px 0;
     transition-duration: .3s;
 }
-.secondScreen-newsRightContent:hover{
+.secondScreenNewsRightContent:hover{
     color: rgb(13, 81, 145);
     cursor: pointer;
 }
 
 /* 3rd-screen */
 .thirdScreen{
-    /* border: 1px solid red; */
     width: 1200px;
     margin: 0 auto;
     padding: 50px 0;
 }
-.thirdScreen > h2{
+.thirdScreenTitle{
     font-size: 24px;
     margin-left: 100px;
 }
@@ -394,8 +387,7 @@ export default {
     position: absolute;
     box-shadow: 0 0 80px 15px #ffffff inset;
 }
-.boxContent{
-    /* border: 1px solid blue; */
+.boxContentRight{
     z-index: 30;
     height: 658px;
     width: 530px;
@@ -410,8 +402,7 @@ export default {
     border-radius: 10px;
     box-shadow: 5px 5px 5px 0px rgb(43, 43, 43);
 }
-.textContent{
-    /* border: 1px solid purple; */
+.textContentRight{
     color: white;
     font-size: 20px;
     z-index: 48;
@@ -425,8 +416,7 @@ export default {
     border-radius: 0 0 10px 10px;
     overflow: hidden;
 }
-.boxContent2{
-    /* border: 1px solid blue; */
+.boxContentLeft{
     z-index: 30;
     height: 658px;
     width: 530px;
@@ -441,8 +431,7 @@ export default {
     border-radius: 10px;
     box-shadow: 5px 5px 5px 0px rgb(43, 43, 43);
 }
-.textContent2{
-    /* border: 1px solid purple; */
+.textContentLeft{
     color: white;
     font-size: 20px;
     z-index: 48;
@@ -457,7 +446,6 @@ export default {
     overflow: hidden;
 }
 .maskContent{
-    /* border: 1px solid blue; */
     background: linear-gradient(to bottom, black, transparent 150%);
     display: inline-block;
     height: 100%;
@@ -468,8 +456,7 @@ export default {
     overflow: hidden;
     border-radius: 0 0 10px 10px;
 }
-.textContent > p{
-    /* border: 1px solid blue; */
+.textContentTitle{
     height: 85px;
     width: 85%;
     margin-top: 25px;
@@ -479,18 +466,7 @@ export default {
     font-size: 20px;
     line-height: 30px;
 }
-.textContent2 > p{
-    /* border: 1px solid blue; */
-    height: 85px;
-    width: 85%;
-    margin-top: 25px;
-    margin-bottom: 0;
-    margin-left: 40px;
-    margin-right: 40px;
-    font-size: 20px;
-    line-height: 30px;
-}
-.book_rightnow{
+.bookRightnow{
     border: 1px solid rgb(201, 16, 16);
     font-size: 16px;
     transition-duration: .3s;
@@ -504,11 +480,11 @@ export default {
     margin-top: 15px;
     margin-left: 40px;
 }
-.book_rightnow:hover{
+.bookRightnow:hover{
     background-color: rgb(185, 15, 15);
     cursor: pointer;
 }
-.check_detail{
+.checkDetail{
     width: 100px;
     height: 100px;
     position: absolute;
@@ -518,7 +494,7 @@ export default {
     transition-duration: .3s;
     font-size: 16px;
 }
-.check_detail:hover{
+.checkDetail:hover{
     color: rgb(228, 228, 228);
     cursor: pointer;
 }

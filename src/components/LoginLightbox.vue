@@ -1,17 +1,17 @@
 <template>
-    <div class="loginLightbox-bg" :class="{ lightboxNoShow: this.messageFromParent }">
+    <div class="loginLightboxBg" :class="{ lightboxNoShow: this.messageFromParent }">
         <div class="loginer">
-            <p class="tittle">會員登入</p>
-            <p class="choose">請選擇以下社群帳號登入！</p>
-            <div class="google">
-                <a href="#"><img src="../assets/img/google.png"></a>
+            <p class="loginTittle">會員登入</p>
+            <p class="chooseAccont">請選擇以下社群帳號登入！</p>
+            <div class="googleLogin">
+                <a><img class="googleLoginBtn" src="../assets/img/google.png"></a>
             </div>
             <br>
-            <div class="facebook">
-                <a href="#"><img src="../assets/img/facebook.png"></a>
+            <div class="facebookLogin">
+                <a><img class="facebookLoginBtn" src="../assets/img/facebook.png"></a>
             </div>
-            <img @click="loginLightboxClose" class="cross1" src="../assets/img/cross.png"><br>
-            <p class="not_member">還不是會員？ <a href="#">註冊</a></p>
+            <img @click="loginLightboxClose" class="cross" src="../assets/img/cross.png"><br>
+            <p class="notMember">還不是會員？ <a class="goToRegist">註冊</a></p>
         </div>
     </div>
 </template>
@@ -33,8 +33,7 @@ export default {
 </script>
 
 <style scoped>
-.loginLightbox-bg{
-    /* display: none; */
+.loginLightboxBg{
     position: fixed;
     top: 0;
     left: 0;
@@ -52,7 +51,7 @@ export default {
 .lightboxNoShow{
     display: none;
 }
-div.loginer{
+.loginer{
     width: 500px;
     height: 450px;
     background-color: white;
@@ -63,38 +62,40 @@ div.loginer{
     overflow: hidden;
     box-shadow: 0px 5px 10px 0px rgb(40,40,40) inset;
 }
-.loginer > p.tittle{
+.loginTittle{
     background-color: rgb(40,40,40);
     color: white;
     padding: 20px;
     font-size: 20px;
 }
-.loginer > p.choose{
+.chooseAccont{
     color: red;
     padding: 40px;
     padding-bottom: 35px;
     font-size: 18px;  
 }
-.cross1{
+.cross{
     width: 15px;
     position: absolute;
     top: 12px;
     right: 12px;
     cursor: pointer;
 }
-.not_member{
+.notMember{
     color: black;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 15px;
 }
-.not_member > a{
+.goToRegist{
     color: rgb(16, 141, 232);
-    transition: .3s;      
+    transition: .3s; 
+    text-decoration-line: underline;    
 }
-.not_member > a:hover{
+.goToRegist:hover{
     color: blue;
+    cursor: pointer;
 }
-.google{
+.googleLogin{
     border: 1px solid lightgray;
     padding: 10px;
     padding-bottom: 5px;
@@ -103,14 +104,14 @@ div.loginer{
     border-radius: 5px;
     margin-bottom: 5px;
 }
-.google:hover{
+.googleLogin:hover{
     border: 1px solid gray;
 }
-.google > a > img{
+.googleLoginBtn{
     width: 200px;
     border-radius: 5px;
 }
-.facebook{
+.facebookLogin{
     border: 1px solid lightgray;
     padding: 10px;
     padding-bottom: 5px;
@@ -119,10 +120,10 @@ div.loginer{
     border-radius: 5px;
     background-color: rgb(60, 91, 155);
 }
-.facebook:hover{
+.facebookLogin:hover{
     border: 1px solid gray;
 }
-.facebook > a > img{
+.facebookLoginBtn{
     width: 200px;
     height: 66px;
     border-radius: 5px;

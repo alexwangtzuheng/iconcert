@@ -4,27 +4,27 @@
       <loginLightbox @loginLightboxClose='loginLightboxClose' :messageFromParent='message'></loginLightbox>  
       <!-- regist lightbox -->
       <registLightbox @registLightboxClose='registLightboxClose' :messageFromParent2='message2'></registLightbox> 
-      <div class="nabar-homepage">
-        <router-link :to="'/'"><img src="../assets/img/iconsert-3.png"></router-link>
+      <div class="nabarHomepage">
+        <router-link :to="'/'"><img class="icon" src="../assets/img/iconsert-3.png"></router-link>
       </div>
-      <div class="navbar-lists">
-        <ul class="navbar-listsUl">
-          <li class="navbar-listsLi">
+      <div class="navbarLists">
+        <ul class="navbarListsUl">
+          <li class="navbarListsLi">
             <router-link :to="'/programs'">節目資訊</router-link>
           </li>
-          <li class="navbar-listsLi">
+          <li class="navbarListsLi">
             <router-link :to="'/news'">最新消息</router-link>
           </li>
-          <li class="navbar-listsLi">
+          <li class="navbarListsLi">
             <router-link :to="'/questions'">常見問題</router-link>
           </li>
-          <li class="navbar-listsLi" style="margin-right:20px">
+          <li class="navbarListsLi" style="margin-right:20px">
             <router-link :to="'/order'">訂單查詢</router-link>
           </li>
-          <li @click="showLoginLightbox" class="navbar-listsLiLogin">
+          <li @click="showLoginLightbox" class="navbarListsLiLogin">
             <span>登入</span>
           </li>
-          <li @click="showRegistLightbox" class="navbar-listsLiRegist">
+          <li @click="showRegistLightbox" class="navbarListsLiRegist">
             <span>註冊</span>
           </li>
         </ul>
@@ -74,31 +74,30 @@ export default {
     background-color: white;
     box-shadow: 2px 2px 5px 2px lightgray;
 }
-.nabar-homepage > a {
+.nabarHomepage > a {
     display: inline-block;
     width: 70px;
     height: 70px;
     margin-left: 50px;
 }
-.nabar-homepage > a > img{
+.icon{
     height: 58px;
     margin: 6px;
 }
-.navbar-lists{
+.navbarLists{
     display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
 }
-.navbar-listsUl{
+.navbarListsUl{
     display: inline-block;
     margin-right: 50px;
 }
-.navbar-listsLi{
+.navbarListsLi{
     display: inline-block;
 }
-.navbar-listsLi > a{
-    /* border: 1px solid red; */
+.navbarListsLi > a{
     display: inline-block;
     text-decoration-line: none;
     color: black;
@@ -109,17 +108,17 @@ export default {
     text-align: center;
     transition-duration: .3s;
 }
-.navbar-listsLi >a:hover{
+.navbarListsLi >a:hover{
     background-color: rgb(230,230,230);
 }
-.navbar-listsLiLogin, .navbar-listsLiRegist{
+.navbarListsLiLogin, .navbarListsLiRegist{
     display: inline-block;
     /* border: 1px solid red; */
     color: gray;
     margin-left: 20px;
     transition-duration: .3s;
 }
-.navbar-listsLiLogin:hover, .navbar-listsLiRegist:hover{
+.navbarListsLiLogin:hover, .navbarListsLiRegist:hover{
     cursor: pointer;
     /* text-decoration-line: underline; */
     color: rgb(68, 68, 68);

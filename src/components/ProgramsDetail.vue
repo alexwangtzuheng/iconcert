@@ -1,16 +1,16 @@
 <template>
-  <div class="program-bg"> 
+  <div class="programBg"> 
     <div class="program">
-    <h2>&nbsp;&nbsp;節目資訊</h2>
+    <h2 class="programTitle">&nbsp;&nbsp;節目資訊</h2>
     <hr>
     <br>
-    <div class="ai1">
-      <div class="ai1_img">
-        <img class="ai" :src="programsData.programs[$route.params.id].bgPhoto"><br>
+    <div class="programMain">
+      <div class="programImgBox">
+        <img class="programImg" :src="programsData.programs[$route.params.id].bgPhoto"><br>
       </div>
-      <div class="ai1_content">
+      <div class="programContent">
         <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
-        <router-link :to="{name:'ProgramsSelectSeats', params:{ id:$route.params.id }}" class="book_rightnow">立即訂購</router-link>
+        <router-link :to="{name:'ProgramsSelectSeats', params:{ id:$route.params.id }}" class="bookRightnow">立即訂購</router-link>
         <div @click="seeDetail" class="ai1_quastion_list">
           <div class="rectangle"></div>節目資訊<img :class="{ rotateTriangle:isrotateTriangle }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
@@ -44,7 +44,7 @@
           主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;辦：媒體棧國際行銷事業股份有限公司<br>
           協&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;辦：Sony Music 傑慶娛樂<br>
           場地示意圖：<br>
-          <img class="egg_seat" src="../assets/img/egg_seat.png" alt=""> </p>
+          <img class="eggSeat" src="../assets/img/egg_seat.png" alt=""> </p>
         <div @click="seeDetail2" class="ai1_quastion_list">
           <div class="rectangle"></div>場次<img :class="{ rotateTriangle:isrotateTriangle2 }" class="triangle_right" src="../assets/img/triangle_right2.png">
         </div>
@@ -152,7 +152,7 @@ export default {
 </script>
 
 <style scoped>
-.program-bg{
+.programBg{
     background-color: rgb(245, 245, 245);
     padding-bottom: 150px; 
 }
@@ -163,21 +163,19 @@ export default {
     margin: 0 auto;
     padding-top: 50px;
 }
-.program> h2{
+.programTitle{
     font-size: 24px;
 }
 .program > hr{
     border-top: 1px dashed gray;
 }
-.ai1{
-    /* border: 1px solid red; */
+.programMain{
     width: 1200px;
     margin: 0 auto;
     text-align: left;
     position: relative;
 }
-.ai1_img{
-    /* border: 1px solid lightgray; */
+.programImgBox{
     display: inline-block;
     font-size: 0;
     text-align: center;
@@ -185,24 +183,23 @@ export default {
     left: 20px;
     top: 0;
 }
-img.ai{
+img.programImg{
     border: 1px solid lightgray;
     width: 430px;
 }
-.ai1_content{
+.programContent{
     display: inline-block;
     font-size: 0;
     margin-left: 500px;
 }
-.ai1_content > h3{
-    /* border: 1px solid orange; */
+.programContent > h3{
     width: 480px;
     font-size: 25px;
     line-height: 35px;
     margin-left: 10px;
     display: inline-block;
 }
-.book_rightnow{
+.bookRightnow{
     border: 1px solid rgb(201, 16, 16);
     font-size: 16px;
     margin: 20px 10px 20px;
@@ -217,11 +214,10 @@ img.ai{
     text-align: center;
     transform: translateY(-25%) translateX(5px);
 }
-.book_rightnow:hover{
+.bookRightnow:hover{
     background-color: rgb(185, 15, 15);
 }
 .ai1_quastion_list{
-    /* border: 1px solid lightgray; */
     width: 640px;
     margin: 10px;
     margin-bottom: 0;
@@ -237,7 +233,6 @@ img.ai{
     border-right: 1px solid lightgray;
 }
 .rectangle{
-    /* border: 1px solid black; */
     display: inline-block;
     width: 7px;
     height: 70%;
@@ -281,7 +276,7 @@ img.ai{
 .preopen, .preopen2, .preopen3, .preopen4, .preopen5, .preopen6{
     display: block;
 }
-.egg_seat{
+.eggSeat{
     width: 350px;
 }
 </style>

@@ -1,29 +1,31 @@
 <template>
-    <div class="program-bg">
+    <div class="programBg">
         <div class="program">
-            <h2>&nbsp;&nbsp;節目資訊</h2>
+            <h2 class="programTitle">&nbsp;&nbsp;節目資訊</h2>
             <hr>
             <br>
-            <div class="ai1">
-                <div class="ai1_img">
-                    <img class="ai" :src="programsData.programs[$route.params.id].bgPhoto"><br>
-                    <img class="egg_seat" src="../assets/img/egg_seat.png">
+            <div class="selectAmountMain">
+                <!-- 左半邊 -->
+                <div class="selectAmountMainImgBox">
+                    <img class="selectAmountMainImg" :src="programsData.programs[$route.params.id].bgPhoto"><br>
+                    <img class="eggSeat" src="../assets/img/egg_seat.png">
                 </div>
-                <div class="ai1_content">
+                <!-- 右半邊 -->
+                <div class="chooseAmountBox">
                     <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
                     <img class="step2" src="../assets/img/step2.svg">
-                    <div class="choose_amount">
+                    <div class="chooseAmount">
                         <ul>
                             <li>&#9672; 演出日期：2020/05/23(六) 台北小巨蛋</li>
                             <li>&#9672; 選定區域：
                                 <label class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>特A1區<span class="price">4200</span>
                                 <input @click="minus" class="min" type="button" value="-" />
-                                <input class="text_box" onkeyup="value=value.replace(/[^\d]/g,'')" type="text" v-model="ticketAmount" :min="min" :max="max" />
+                                <input class="textBox" onkeyup="value=value.replace(/[^\d]/g,'')" type="text" v-model="ticketAmount" :min="min" :max="max" />
                                 <input @click="add" class="add" type="button" value="+" />
                             </li>
-                            <li class="totalPrice">總價： <label id="total">{{ totalPrice }}</label> 元</li>
+                            <li class="totalPrice">總價： <label class="total">{{ totalPrice }}</label> 元</li>
                         </ul>
-                        <div class="choose_amountBtn">
+                        <div class="chooseAmountBtn">
                             <button class="pay">結帳</button>
                             <button @click="lastpage" class="cancel">返回</button>
                         </div>
@@ -71,45 +73,45 @@ export default {
 a{
     text-decoration-line: none;
 }
-input {
+input{
     -webkit-appearance: none;  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
     -moz-appearance: none;     /* FireFox */
     appearance: none;
 }
-.program-bg{
+.programBg{
     background-color: rgb(245, 245, 245);
     padding-bottom: 150px;
 }
 .program{
-    /* border: 1px solid red; */
     position: relative;
     width: 1200px;
     margin: 0 auto;
     padding-top: 50px;
 }
-.program> h2{
+.programTitle{
     font-size: 24px;
 }
 .program > hr{
     border-top: 1px dashed gray;
 }
 /* ==========內容=============================== */
-.ai1{
+.selectAmountMain{
     width: 1200px;
     margin: 0 auto;
     text-align: left;
     position: relative;
 }
-.ai1_img{
+/* 左半邊 */
+.selectAmountMainImgBox{
     display: inline-block;
     text-align: center;
 }
-.ai{
+.selectAmountMainImg{
     border: 1px solid lightgray;
     width: 450px;
     margin-left: 20px;
 }
-img.egg_seat{
+.eggSeat{
     margin-top: 50px;
     margin-left: 20px;
     width: 430px;
@@ -117,12 +119,12 @@ img.egg_seat{
 }
 
 /* 右半邊 */
-.ai1_content{
+.chooseAmountBox{
     display: inline-block;
     position: absolute;
     left: 500px;
 }
-.ai1_content > h3{
+.chooseAmountBox > h3{
     /* border: 1px solid orange; */
     width: 650px;
     font-size: 25px;
@@ -133,7 +135,7 @@ img.egg_seat{
     margin-top: 60px;
     width: 650px;
 }
-.choose_amount{
+.chooseAmount{
     border: 1px solid lightgray;
     background-color: white;
     width: 600px;
@@ -143,14 +145,13 @@ img.egg_seat{
     border-radius: 5px;
     position: relative;
 }
-.choose_amount > ul{
-    /* border: 1px solid red; */
+.chooseAmount > ul{
     width: 430px;
     margin: 0 auto;
     list-style: none;
     margin-top: 50px;
 }
-.choose_amount > ul >li{
+.chooseAmount > ul >li{
     margin-bottom: 30px;
 }
 li.totalPrice{
@@ -162,12 +163,12 @@ li.totalPrice{
     color: rgb(37, 78, 160);
     margin-right: 5px;
 }
-.text_box{
+.textBox{
     width: 55px;
     height: 30px;
     text-align: center;
 }
-input.text_box:focus{
+input.textBox:focus{
     outline: none;
     border-color: lightgray;
 }
@@ -183,11 +184,11 @@ input.text_box:focus{
 input.min:hover, input.add:hover{
     background-color: lightgray;
 }
-#total{
+.total{
     color: red;
     font-size: 25px;
 }
-.choose_amountBtn{
+.chooseAmountBtn{
     /* border: 1px solid red; */
     margin-top: 60px;
     margin-bottom: 50px;

@@ -1,38 +1,40 @@
 <template>
-  <div class="program-bg">
+  <div class="programBg">
     <div class="program">
-    <h2>&nbsp;&nbsp;節目資訊</h2>
+    <h2 class="programTitle">&nbsp;&nbsp;節目資訊</h2>
     <hr>
     <br>
-      <div class="ai1">
-        <div class="ai1_img">
-            <img class="ai" :src="programsData.programs[$route.params.id].bgPhoto"><br>
-            <p class="ai1_imgP">請選擇區域！</p>
-            <div class="seats_selection">
-            <a href="#" class="seats_tittle"><label class="box1">&nbsp;&nbsp;&nbsp;&nbsp;</label>4200區</a><br><br>
-            <router-link :to="{name:'ProgramsSelectAmount', params:{ id:$route.params.id }}" v-for="(item, index) in selectSeats4200"><a class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }}</a><br><br></router-link>
-            <a href="#" class="seats_tittle"><label class="box4">&nbsp;&nbsp;&nbsp;&nbsp;</label>3800區</a><br><br>
-            <span v-for="item in selectSeats3800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-            <a href="#" class="seats_tittle"><label class="box6">&nbsp;&nbsp;&nbsp;&nbsp;</label>3200區</a><br><br>
-            <span v-for="item in selectSeats3200"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-            <a href="#" class="seats_tittle"><label class="box14">&nbsp;&nbsp;&nbsp;&nbsp;</label>2800區</a><br><br>
-            <span v-for="item in selectSeats2800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-            <a href="#" class="seats_tittle"><label class="box25">&nbsp;&nbsp;&nbsp;&nbsp;</label>2400區</a><br><br>
-            <span v-for="item in selectSeats2400"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-            <a href="#" class="seats_tittle"><label class="box30">&nbsp;&nbsp;&nbsp;&nbsp;</label>2000區</a><br><br>
-            <span v-for="item in selectSeats2000"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-            <a href="#" class="seats_tittle"><label class="box37">&nbsp;&nbsp;&nbsp;&nbsp;</label>1600區</a><br><br>
-            <span v-for="item in selectSeats1600"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
-            <a href="#" class="seats_tittle"><label class="box48">&nbsp;&nbsp;&nbsp;&nbsp;</label>800區</a><br><br>
-            <span v-for="item in selectSeats800"><a href="#" class="seats_content"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+      <div class="selectSeatsMain">
+        <!-- 左半邊 -->
+        <div class="selectSeatsBox">
+            <img class="selectSeatsImg" :src="programsData.programs[$route.params.id].bgPhoto"><br>
+            <p class="selectSeatsWarnning">請選擇區域！</p>
+            <div class="seatsSelection">
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox1">&nbsp;&nbsp;&nbsp;&nbsp;</label>4200區</a><br><br>
+            <router-link :to="{name:'ProgramsSelectAmount', params:{ id:$route.params.id }}" v-for="(item, index) in selectSeats4200"><a class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }}</a><br><br></router-link>
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox4">&nbsp;&nbsp;&nbsp;&nbsp;</label>3800區</a><br><br>
+            <span v-for="item in selectSeats3800"><a href="#" class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox6">&nbsp;&nbsp;&nbsp;&nbsp;</label>3200區</a><br><br>
+            <span v-for="item in selectSeats3200"><a href="#" class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox14">&nbsp;&nbsp;&nbsp;&nbsp;</label>2800區</a><br><br>
+            <span v-for="item in selectSeats2800"><a href="#" class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox25">&nbsp;&nbsp;&nbsp;&nbsp;</label>2400區</a><br><br>
+            <span v-for="item in selectSeats2400"><a href="#" class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox30">&nbsp;&nbsp;&nbsp;&nbsp;</label>2000區</a><br><br>
+            <span v-for="item in selectSeats2000"><a href="#" class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox37">&nbsp;&nbsp;&nbsp;&nbsp;</label>1600區</a><br><br>
+            <span v-for="item in selectSeats1600"><a href="#" class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
+            <a href="#" class="seatsTittle"><label class="chooseSeatsBox48">&nbsp;&nbsp;&nbsp;&nbsp;</label>800區</a><br><br>
+            <span v-for="item in selectSeats800"><a href="#" class="seatsContent"><label :style="{'background':item.color}" class="box">&nbsp;&nbsp;&nbsp;&nbsp;</label>{{ item.seat }} </a><br><br></span>
             </div>
         </div>
-        <div class="ai1_content">
+        <!-- 右半邊 -->
+        <div class="seatsRefBox">
             <h3>{{ programsData.programs[$route.params.id].date }}<br>{{ programsData.programs[$route.params.id].name }}</h3>
             <router-link :to="{name:'ProgramsDetail', params:{ id:$route.params.id }}" class="detail" href="#">查看詳情</router-link>
             <img class="step1" src="../assets/img/step1.svg">
             <p class="seatsRef">座位區參考圖：</p>
-            <img class="egg_seat" src="../assets/img/egg_seat.png">
+            <img class="eggSeat" src="../assets/img/egg_seat.png">
         </div>
       </div>
     </div>
@@ -262,7 +264,7 @@ export default {
 a{
     text-decoration-line: none;
 }
-.program-bg{
+.programBg{
     background-color: rgb(245, 245, 245);
     padding-bottom: 150px;
 }
@@ -273,42 +275,42 @@ a{
     margin: 0 auto;
     padding-top: 50px;
 }
-.program> h2{
+.programTitle{
     font-size: 24px;
 }
 .program > hr{
     border-top: 1px dashed gray;
 }
 /* ==========內容============================ */
-div.ai1{
+.selectSeatsMain{
     width: 1200px;
     margin: 0 auto;
     text-align: left;
     position: relative;
 }
-div.ai1_img{
+.selectSeatsBox{
     display: inline-block;
     text-align: center;
 }
-.ai{
+.selectSeatsImg{
     border: 1px solid lightgray;
     width: 430px;
     margin-left: 20px;
 }
-.ai1_imgP{
+.selectSeatsWarnning{
     font-size: 18px;
     color: red;
     margin-top: 20px;
     margin-left: 20px;
 }
-.seats_selection{
+.seatsSelection{
     margin-top: 30px;
     font-size: 14px;
     text-align: left;
     transform: translateX(15%);
     margin-left: 40px;
 }
-.seats_tittle{
+.seatsTittle{
     text-decoration: none;
     padding: 5px;
     padding-right: 200px;
@@ -317,8 +319,7 @@ div.ai1_img{
     border-radius: 3px;
     color: black;
 }
-.seats_content{
-    /* border: 1px solid purple; */
+.seatsContent{
     font-family: Menlo;
     text-decoration: none;
     padding: 5px;
@@ -330,69 +331,68 @@ div.ai1_img{
     margin-left: 15px;
     transition-duration: .3s;
 }
-.seats_content:hover{
+.seatsContent:hover{
     background-color: rgb(205, 205, 205);
 }
 .box{
     border-radius: 3px;;
     margin-right: 5px;
 }
-.box1{
+.chooseSeatsBox1{
     border-radius: 3px;
     background-color: rgb(37, 78, 160);
     color: rgb(37, 78, 160);
     margin-right: 5px;
 }
-.box4{
+.chooseSeatsBox4{
     border-radius: 3px;
     background-color: rgb(75, 111, 175);
     color: rgb(75, 111, 175);
     margin-right: 5px;
 }
-.box6{
+.chooseSeatsBox6{
     border-radius: 3px;
     background-color: rgb(230, 40, 138);
     color: rgb(230, 40, 138);
     margin-right: 5px;
 }
-.box14{
+.chooseSeatsBox14{
     border-radius: 3px;
     background-color: rgb(231, 151, 191);
     color: rgb(231, 151, 191);
     margin-right: 5px;
 }
-.box25{
+.chooseSeatsBox25{
     border-radius: 3px;
     background-color: rgb(231, 22, 26);
     color: rgb(231, 22, 26);
     margin-right: 5px;
 }
-.box30{
+.chooseSeatsBox30{
     border-radius: 3px;
     background-color: rgb(242, 201, 32);
     color: rgb(242, 201, 32);
     margin-right: 5px;
 }
-.box37{
+.chooseSeatsBox37{
     border-radius: 3px;
     background-color: rgb(255, 241, 0);
     color: rgb(255, 241, 0);
     margin-right: 5px;
 }
-.box48{
+.chooseSeatsBox48{
     border-radius: 3px;
     background-color: rgb(243, 236, 144);
     color: rgb(243, 236, 144);
     margin-right: 5px;
 }
 /* 右半邊 */
-.ai1_content{
-    /* border: 1px solid blue; */
+.seatsRefBox{
     display: inline-block;
     position: absolute;
     left: 500px;
 }
-.ai1_content > h3{
+.seatsRefBox > h3{
     /* border: 1px solid orange; */
     width: 480px;
     font-size: 25px;
@@ -400,7 +400,7 @@ div.ai1_img{
     margin-left: 10px;
     display: inline-block;
 }
-.ai1_content > .detail{
+.seatsRefBox > .detail{
     border: 1px solid rgb(201,16,16);
     font-size: 16px;
     margin: 20px 10px 20px;
@@ -415,7 +415,7 @@ div.ai1_img{
     text-align: center;
     transform: translateY(-25%);
 }
-.ai1_content > .detail:hover{
+.seatsRefBox > .detail:hover{
     background-color: rgb(185,15,15);
 }
 .seatsRef{
@@ -428,7 +428,7 @@ div.ai1_img{
     margin-top: 50px;
     width: 650px;
 }
-.egg_seat{
+.eggSeat{
     width: 650px;
 }
 </style>

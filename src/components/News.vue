@@ -1,9 +1,9 @@
 <template>
-  <div class="news-bg">
+  <div class="newsBg">
     <div class="news">
-      <h2>&nbsp;&nbsp;最新消息</h2>
+      <h2 class="newsTitle">&nbsp;&nbsp;最新消息</h2>
       <hr>
-      <div class="main_text">
+      <div class="newsMain">
         <!-- left aside -->
         <div class="smallmenu">
           <div class="smallmenu_tittle">[置頂]</div>
@@ -31,7 +31,7 @@
           <p class="newthing">[最新公告]</p>
           <div class="textContent" v-for="(item, index) in newthings" :class="createClassNewthing(index)">
             <img src="../assets/img/ticket.png" class="ticket">
-            <label for="">{{item.title}}</label>
+            <label>{{item.title}}</label>
             <img :src="item.img" class="poster">
             <p v-html="item.content">{{item.content}}</p>
           </div>
@@ -39,7 +39,7 @@
           <p class="normal">[一般公告]</p>
           <div class="textContent" v-for="(item, index) in normals" :class="createClassNormal(index)">
             <img src="../assets/img/ticket.png" class="ticket">
-            <label for="">{{ item.title }}</label>
+            <label>{{ item.title }}</label>
             <img :src="item.img" class="poster">
             <p v-html="item.content">{{ item.content }}</p>
           </div>
@@ -161,7 +161,7 @@ export default {
 </script>
 
 <style scoped>
-.news-bg{
+.newsBg{
     background-color: rgb(245, 245, 245);
     padding-bottom: 150px;
 }
@@ -171,7 +171,7 @@ export default {
     margin: 0 auto;
     padding-top: 50px;
 }
-.news> h2{
+.newsTitle{
     font-size: 24px;
 }
 .news > hr{
@@ -179,7 +179,7 @@ export default {
 }
 
 /* left aside */
-div.main_text{
+.newsMain{
     width: 1200px;
     margin: 0 auto;
     padding: 10px 0px 10px;
@@ -195,7 +195,7 @@ div.main_text{
     display: inline-block;
     vertical-align: top;
 }
-.smallmenu > .smallmenu_tittle{
+.smallmenu_tittle{
     /* border: 1px solid red; */
     font-size: 18px;
     margin-top: 10px;
@@ -207,7 +207,7 @@ div.main_text{
     border-radius: 3px;
     border-bottom: 1px solid transparent;
 }
-.smallmenu > .smallmenu_content{
+.smallmenu_content{
     cursor: pointer;
     padding: 3px;
     padding-bottom: 10px;
@@ -215,7 +215,7 @@ div.main_text{
     color: rgb(16, 141, 232);
     background-color: rgb(240, 240, 240);
 }
-.smallmenu > .smallmenu_content:hover{
+.smallmenu_content:hover{
     color: blue;
 }
 .smallmenu_content > img{
@@ -253,7 +253,7 @@ div.newscontent{
     width: 25px;
     padding-top: 10px;
 }
-.textContent > .poster{
+.poster{
     width: 900px;
     margin-left: 30px;
     margin-top: 10px;
@@ -275,11 +275,5 @@ div.newscontent{
     margin: 10px;
     background-color: lightgray;
     border-radius: 5px;
-}
-div.textContent > a.ios1{
-    margin-left: 30px;
-}
-div.textContent > a:hover{
-    background-color: gray;
 }
 </style>

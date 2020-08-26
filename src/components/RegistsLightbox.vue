@@ -1,14 +1,14 @@
 <template>
-    <div class="registLightbox-bg" :class="{ lightboxNoShow: this.messageFromParent2 }">
+    <div class="registLightboxBg" :class="{ lightboxNoShow: this.messageFromParent2 }">
         <div class="register">
-            <p class="tittle">會員註冊</p>
-            <p>請選擇以下社群帳號註冊會員！</p>
-            <div class="google">
-              <a href="#"><img src="../assets/img/google.png"></a>
+            <p class="registTittle">會員註冊</p>
+            <p class="registWarnning">請選擇以下社群帳號註冊會員！</p>
+            <div class="googleRegist">
+              <a><img src="../assets/img/google.png"></a>
             </div>
             <br>
-            <div class="facebook">
-              <a href="#"><img src="../assets/img/facebook.png"></a>
+            <div class="facebookRegist">
+              <a><img src="../assets/img/facebook.png"></a>
             </div>
             <img @click="registLightboxClose" class="cross" src="../assets/img/cross.png">
         </div>
@@ -32,8 +32,7 @@ export default {
 </script>
 
 <style scoped>
-.registLightbox-bg{
-    /* display: none; */
+.registLightboxBg{
     position: fixed;
     top: 0;
     left: 0;
@@ -45,38 +44,34 @@ export default {
     animation: fadeEffect .5s;
 }
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 .lightboxNoShow{
     display: none;
 }
-div.register{
-  width: 500px;
-  height: 450px;
-  background-color: white;
-  display: inline-block;
-  margin-top: 10vh;
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0px 5px 10px 0px rgb(40,40,40) inset;
+.register{
+    width: 500px;
+    height: 450px;
+    background-color: white;
+    display: inline-block;
+    margin-top: 10vh;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px rgb(40,40,40) inset;
 }
-.register > p.tittle{
-  background-color: rgb(40,40,40);
-  color: white;
-  padding: 20px;
-  font-size: 20px;
-  font-family: Microsoft JhengHei;
-  letter-spacing: .5px;
+.registTittle{
+    background-color: rgb(40,40,40);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
 }
-.register > p{
-  color: red;
-  padding: 40px;
-  padding-bottom: 35px;
-  font-size: 18px;
-  font-family: Microsoft JhengHei;
-  letter-spacing: .5px;
+.registWarnning{
+    color: red;
+    padding: 40px;
+    padding-bottom: 35px;
+    font-size: 18px;
 }
 .cross{
   width: 15px;
@@ -85,7 +80,7 @@ div.register{
   right: 12px;
   cursor: pointer;
 }
-.google{
+.googleRegist{
   border: 1px solid lightgray;
   padding: 10px;
   padding-bottom: 5px;
@@ -94,14 +89,15 @@ div.register{
   border-radius: 5px;
   margin-bottom: 5px;
 }
-.google:hover{
+.googleRegist:hover{
   border: 1px solid gray;
+  cursor: pointer;
 }
-.google > a > img{
+.googleRegist > a > img{
   width: 200px;
   border-radius: 5px;
 }
-.facebook{
+.facebookRegist{
   border: 1px solid lightgray;
   padding: 10px;
   padding-bottom: 5px;
@@ -110,10 +106,11 @@ div.register{
   border-radius: 5px;
   background-color: rgb(60, 91, 155);
 }
-.facebook:hover{
+.facebookRegist:hover{
   border: 1px solid gray;
+  cursor: pointer;
 }
-.facebook > a > img{
+.facebookRegist > a > img{
   width: 200px;
   height: 66px;
   border-radius: 5px;
